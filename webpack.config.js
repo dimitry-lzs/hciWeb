@@ -35,12 +35,10 @@ module.exports = (env, argv) => {
                     loader: 'ts-loader',
                     options: { allowTsInNodeModules: true }
                 },
-
                 {
                     test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
-                    loader: 'file-loader'
+                    type: 'asset/resource'
                 },
-
                 {
                     test: /\.css$/,
                     use: ['style-loader', 'css-loader']
