@@ -1,16 +1,12 @@
 import React from 'react';
 import './Main.less';
 import MenuButton, { MenuButtonIcon } from '../../components/MenuButton';
+import Header from '../../components/Header';
 
 export default function MainScreen() {
     return (
         <div>
-            <div className='Header'>
-                <div className='PageTitle'>
-                    <div className='Logo' />
-                    Main Screen
-                </div>
-            </div>
+            <Header title='Smart Camp Settings' />
             <div className='Content'>
                 <div className='Title'>Main Menu</div>
                 <div className='Menu'>
