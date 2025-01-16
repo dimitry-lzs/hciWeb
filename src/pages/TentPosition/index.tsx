@@ -11,9 +11,9 @@ export default function TentPosition() {
                 <div className='MapContainer'>
                     <div className='Map'>
                         <div className='MapPoint first' />
-                        <div className='MapPoint 2' />
-                        <div className='MapPoint 3' />
-                        <div className='MapPoint 4' />
+                        <div className='MapPoint second' />
+                        <div className='MapPoint third' />
+                        <div className='MapPoint fourth' />
                     </div>
                     <div className='MapControls'>
                         <div className='InfoContainer'>
