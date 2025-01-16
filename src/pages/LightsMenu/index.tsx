@@ -8,7 +8,7 @@ import {useNavigate } from 'react-router-dom';
 export default function LightsMenu() {
     const navigate = useNavigate();
     return (
-        <div>
+        <div className='LightsMenu'>
             <Header title='Smart Camp Lighting' />
             <div className='Content'>
                 <div className='Menu'>
