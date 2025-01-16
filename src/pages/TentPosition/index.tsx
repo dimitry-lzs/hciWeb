@@ -1,11 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import Header from '../../components/Header';
 import ConfirmButton, { ButtonColor, ButtonIcon } from '../../components/ConfirmButton';
+import InfoContainer, { InfoRow } from '../../components/InfoContainer';
+import BackButton from '../../components/BackButton';
 
 import './TentPosition.less';
-import InfoContainer, { InfoRow } from '../../components/InfoContainer';
 
 export default function TentPosition() {
+    const navigate = useNavigate();
+
     return (
         <div>
             <Header title='Tent Position' />
@@ -26,6 +31,9 @@ export default function TentPosition() {
                         </InfoContainer>
                         <ConfirmButton icon={ButtonIcon.Tick} color={ButtonColor.Green} />
                     </div>
+                </div>
+                <div className='NavigationButton'>
+                    <BackButton navigate={() => navigate(-1)} />
                 </div>
             </div>
         </div>
