@@ -9,7 +9,9 @@ export enum MenuButtonIcon {
     Lighting = 'lighting',
     Energy = 'energy',
     Weather = 'weather',
-    Activities = 'activities'
+    Activities = 'activities',
+    Lightbulb = 'lightbulb',
+    SpecialOccasions = 'specialOccasions'
 }
 
 export default function MenuButton({ title, icon, link }: {
