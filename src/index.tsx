@@ -10,6 +10,7 @@ import MainScreen from './pages/Main';
 import TentPosition from './pages/TentPosition';
 import ClothsSetup from './pages/ClothsSetup';
 import ErrorScreen from './pages/Error';
+import LightsMenu from './pages/LightsMenu';
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             {
                 path: '/cloths-setup',
                 element: <ClothsSetup />
+            },
+            {
+                path: '/lighting',
+                element: <LightsMenu/>
             }
         ],
         errorElement: <ErrorScreen />
