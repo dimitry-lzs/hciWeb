@@ -1,5 +1,6 @@
 import React from 'react';
 import './Main.less';
+import MenuButton, { MenuButtonIcon } from '../../components/MenuButton';
 
 export default function MainScreen() {
     return (
@@ -14,32 +15,14 @@ export default function MainScreen() {
                 <div className='Title'>Main Menu</div>
                 <div className='Menu'>
                     <div className='ButtonsRow'>
-                        <div className='MenuButton'>
-                            <div className='ButtonTitle'>Tent setup</div>
-                            <div className='ButtonIcon tentSetup' />
-                        </div>
-                        <div className='MenuButton'>
-                            <div className='ButtonTitle'>Cloths</div>
-                            <div className='ButtonIcon cloths' />
-                        </div>
-                        <div className='MenuButton'>
-                            <div className='ButtonTitle'>Lighting</div>
-                            <div className='ButtonIcon lighting' />
-                        </div>
+                        <MenuButton title='Tent setup' icon={MenuButtonIcon.TentSetup} link='/tent-position' />
+                        <MenuButton title='Cloths' icon={MenuButtonIcon.Cloths} link='/cloths-setup' />
+                        <MenuButton title='Lighting' icon={MenuButtonIcon.Lighting} link='/lighting' />
                     </div>
                     <div className='ButtonsRow'>
-                        <div className='MenuButton'>
-                            <div className='ButtonTitle'>Energy / AC</div>
-                            <div className='ButtonIcon energy' />
-                        </div>
-                        <div className='MenuButton'>
-                            <div className='ButtonTitle'>Weather</div>
-                            <div className='ButtonIcon weather' />
-                        </div>
-                        <div className='MenuButton'>
-                            <div className='ButtonTitle'>Activities</div>
-                            <div className='ButtonIcon activities' />
-                        </div>
+                        <MenuButton title='Energy' icon={MenuButtonIcon.Energy} link='/energy' />
+                        <MenuButton title='Weather' icon={MenuButtonIcon.Weather} link='/weather' />
+                        <MenuButton title='Activities' icon={MenuButtonIcon.Activities} link='/activities' />
                     </div>
                 </div>
             </div>
