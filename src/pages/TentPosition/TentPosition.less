@@ -1,0 +1,41 @@
+.Content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .MapContainer {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+
+        .Map {
+            position: relative;
+            height: 400px;
+            width: 667px;
+            background-image: url('../../assets/Map.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: url('../../assets/Cursor.png') 5 2, auto;
+
+            .MapPoint {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                background-image: url('../../assets/Target.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                &.first {
+                    top: 10px;
+                    left: 44px;
+                }
+            }
+        }
+    }
+}
