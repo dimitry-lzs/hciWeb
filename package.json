@@ -1,7 +1,7 @@
 {
-  "name": "react-seed",
+  "name": "tsadeeree",
   "version": "1.0.0",
-  "description": "React Seed",
+  "description": "TsaDeeRee",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
@@ -11,8 +11,7 @@
     "prod": "npm run build && http-server ./dist"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/honcon/react18-seed.git"
+    "type": "git"
   },
   "author": "",
   "license": "UNLICENSED",
