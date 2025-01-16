@@ -22,7 +22,7 @@ export default function TentPosition() {
                             <InfoRow label='Chosen point:' value='74,54501° N, 8,41251° W' />
                             <InfoRow label='Soil Stability:' value='The ground here is stable, providing a firm foundation.' />
                             <InfoRow label='Chosen point:' value='74,54501° N, 8,41251° W' />
-                            <InfoRow label='Soil Stability:' value='The ground here is stable, providing a firm foundation.' />
+                            <InfoRow label='Sun Exposure:' value='This area receives ample sunlight throughout the day.' />
                         </InfoContainer>
                         <ConfirmButton icon={ButtonIcon.Tick} color={ButtonColor.Green} />
                     </div>
