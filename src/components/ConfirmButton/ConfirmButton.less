@@ -1,0 +1,56 @@
+.ConfirmButton {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 28px;
+    width: min-content;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.blue {
+        color: #164E63;
+        background-color: #67E8F9;
+
+        &:hover {
+            background-color: #4ED9E9;
+        }
+    }
+
+    &.green {
+        color: black;
+        background-color: #6EE7B7;
+
+        &:hover {
+            background-color: #5ED8A7;
+        }
+    }
+
+    &.yellow {
+        color: #1C274C;
+        background-color: #FACC15;
+
+        &:hover {
+            background-color: #F0B40A;
+        }
+    }
+
+    .ConfirmButtonIcon {
+        margin-left: 12px;
+        width: 16px;
+        height: 16px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &.tick {
+            background-image: url('../../assets/Tick.svg');
+        }
+        &.weather {
+            background-image: url('../../assets/WeatherButtonIcon.svg');
+        }
+        &.battery {
+            background-image: url('../../assets/BatteryLow.svg');
+        }
+    }
+}

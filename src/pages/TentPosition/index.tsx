@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from '../../components/Header';
+import ConfirmButton, { ButtonColor, ButtonIcon } from '../../components/ConfirmButton';
 
 import './TentPosition.less';
+import InfoContainer, { InfoRow } from '../../components/InfoContainer';
 
 export default function TentPosition() {
     return (
@@ -16,28 +18,13 @@ export default function TentPosition() {
                         <div className='MapPoint fourth' />
                     </div>
                     <div className='MapControls'>
-                        <div className='InfoContainer'>
-                            <div className='InfoRow'>
-                                <div className='InfoLabel'>Chosen point:</div>
-                                <div className='InfoValue'>74,54501° N, 8,41251° W</div>
-                            </div>
-                            <div className='InfoRow'>
-                                <div className='InfoLabel'>Soil Stability:</div>
-                                <div className='InfoValue'>The ground here is stable, providing a firm foundation.</div>
-                            </div>
-                            <div className='InfoRow'>
-                                <div className='InfoLabel'>Chosen point:</div>
-                                <div className='InfoValue'>74,54501° N, 8,41251° W</div>
-                            </div>
-                            <div className='InfoRow'>
-                                <div className='InfoLabel'>Soil Stability:</div>
-                                <div className='InfoValue'>The ground here is stable, providing a firm foundation.</div>
-                            </div>
-                        </div>
-                        <div className='ConfirmButton'>
-                            Choose point
-                            <div className='Icon tick' />
-                        </div>
+                        <InfoContainer>
+                            <InfoRow label='Chosen point:' value='74,54501° N, 8,41251° W' />
+                            <InfoRow label='Soil Stability:' value='The ground here is stable, providing a firm foundation.' />
+                            <InfoRow label='Chosen point:' value='74,54501° N, 8,41251° W' />
+                            <InfoRow label='Soil Stability:' value='The ground here is stable, providing a firm foundation.' />
+                        </InfoContainer>
+                        <ConfirmButton icon={ButtonIcon.Tick} color={ButtonColor.Green} />
                     </div>
                 </div>
             </div>
