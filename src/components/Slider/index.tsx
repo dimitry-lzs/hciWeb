@@ -9,7 +9,7 @@ export default function Slider({ minValue = 0, maxValue = 100, type = '%' }: {
     type?: string;
 }) {
     const [value, setValue] = useState(minValue + ((maxValue - minValue) / 2));
-    const percentageValue = useMemo(() =>  (value - minValue) / ((maxValue - minValue) / 100), [value, minValue, maxValue]);
+    const percentageValue = useMemo(() => (value - minValue) / ((maxValue - minValue) / 100), [value, minValue, maxValue]);
     const widthToBeAdded = useMemo(() => (thumbWidth / 2) - ((percentageValue / 100) * thumbWidth), [percentageValue]);
     return (
         <div className='slidecontainer'>
