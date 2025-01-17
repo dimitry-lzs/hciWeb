@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Header from '../../components/Header';
+import HelpModal from '../../components/HelpModal';
 import ConfirmButton, { ButtonColor, ButtonIcon } from '../../components/ConfirmButton';
 import InfoContainer, { InfoRow } from '../../components/InfoContainer';
 import BackButton from '../../components/BackButton';
@@ -13,7 +14,7 @@ export default function TentPosition() {
 
     return (
         <div>
-            <Header title='Tent Position' />
+            <Header title='Tent Position' helpContent={<HelpModal title='Tent Positioning' text='Click where in the map you would like to place your tent. You may take advice from each spots unique characteristics.' />}/>
             <div className='Content'>
                 <div className='MapContainer'>
                     <div className='Map'>
