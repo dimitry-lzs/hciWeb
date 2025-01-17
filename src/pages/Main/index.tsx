@@ -1,12 +1,15 @@
 import React from 'react';
-import './Main.less';
+
 import MenuButton, { MenuButtonIcon } from '../../components/MenuButton';
 import Header from '../../components/Header';
+import HelpModal from '../../components/HelpModal';
+
+import './Main.less';
 
 export default function MainScreen() {
     return (
         <div>
-            <Header title='Smart Camp Settings' />
+            <Header title='Smart Camp Settings' helpContent={<HelpModal title='Main Menu' text='Here you can navigate to all other pages of the app' />} />
             <div className='Content'>
                 <div className='Title'>Main Menu</div>
                 <div className='Menu'>

@@ -2,7 +2,8 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import {
     RouterProvider,
-    createBrowserRouter
+    createBrowserRouter,
+    redirect
 } from 'react-router-dom';
 
 import App from './app/App';
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
             <App />
         ),
         children: [
+            {
+                index: true,
+                element: <React.Fragment />,
+                loader: () => redirect('/main')
+            },
             {
                 path: '/main',
                 index: true,
