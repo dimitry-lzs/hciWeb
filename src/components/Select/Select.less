@@ -1,0 +1,39 @@
+.custom-select {
+    position: relative;
+    width: min-content;
+
+    select {
+        appearance: none;
+        width: 250px;
+        font-size: 16px;
+        padding: 12px;
+        background-color: #fff;
+        border: 1px solid #D4D4D4;
+        border-radius: 32px;
+        color: #A3A3A3;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+            border-color: #D4D4D4;  // Keep consistent border color
+        }
+
+        &:active {
+            outline: none;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        pointer-events: none;
+        top: calc(50% - 10px);
+        right: 12px;
+        background-image: url(../../assets/ChevronDown.svg);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 20px;
+        width: 20px;
+    }
+}
