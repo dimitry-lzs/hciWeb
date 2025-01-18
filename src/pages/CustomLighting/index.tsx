@@ -34,10 +34,12 @@ export default function CustomLighting() {
                                 <div className='SliderText'>Cool</div>
                             </div>
                         </div>
+                        <div className='Buttons'>
+                            <ConfirmButton icon={ButtonIcon.Tick} color={ButtonColor.Green} />
+                            <ConfirmButton icon={ButtonIcon.Weather} color={ButtonColor.Blue} />
+                        </div>
                     </div>
                 </div>
-                <ConfirmButton icon={ButtonIcon.Tick} color={ButtonColor.Green} />
-                <ConfirmButton icon={ButtonIcon.Weather} color={ButtonColor.Blue} />
                 <div className='NavigationButton'>
                     <BackButton navigate={() => navigate(-1)} />
                 </div>
