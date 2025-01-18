@@ -30,7 +30,7 @@ export default function TentPosition() {
                             <InfoRow label='Chosen point:' value='74,54501° N, 8,41251° W' />
                             <InfoRow label='Sun Exposure:' value='This area receives ample sunlight throughout the day.' />
                         </InfoContainer>
-                        <ConfirmButton icon={ButtonIcon.Tick} color={ButtonColor.Green} />
+                        <ConfirmButton text='Confirm' icon={ButtonIcon.Tick} color={ButtonColor.Green} />
                     </div>
                 </div>
                 <div className='NavigationButton'>

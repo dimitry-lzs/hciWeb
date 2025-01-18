@@ -13,6 +13,8 @@ import ClothsSetup from './pages/ClothsSetup';
 import ErrorScreen from './pages/Error';
 import LightsMenu from './pages/LightsMenu';
 import CustomLighting from './pages/CustomLighting';
+import Weather from './pages/Weather';
+import Activities from './pages/Activities';
 
 const router = createBrowserRouter([
     {
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
             {
                 path: '/custom-lighting',
                 element: <CustomLighting/>
+            },
+            {
+                path: '/weather',
+                element: <Weather/>
+            },
+            {
+                path: '/activities',
+                element: <Activities/>
             }
         ],
         errorElement: <ErrorScreen />

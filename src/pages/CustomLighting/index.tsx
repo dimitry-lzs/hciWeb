@@ -35,8 +35,8 @@ export default function CustomLighting() {
                             </div>
                         </div>
                         <div className='Buttons'>
-                            <ConfirmButton icon={ButtonIcon.Tick} color={ButtonColor.Green} />
-                            <ConfirmButton icon={ButtonIcon.Weather} color={ButtonColor.Blue} />
+                            <ConfirmButton text='Save settings' icon={ButtonIcon.Tick} color={ButtonColor.Green} />
+                            <ConfirmButton text='Apply Suggested Settings' icon={ButtonIcon.Weather} color={ButtonColor.Blue} />
                         </div>
                     </div>
                 </div>
