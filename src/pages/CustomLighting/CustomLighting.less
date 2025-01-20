@@ -1,0 +1,70 @@
+.Content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    .SettingsContainer {
+        padding: 70px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+
+        .LightBulb {
+            align-self: start;
+            position: relative;
+            height: 180px;
+            width: 350px;
+            background-image: url('../../assets/BigLightbulb.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .LightingControls {
+        width: 450px;
+        gap: 300px;
+        flex-direction: column;
+
+        .SliderTitle {
+            padding-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .SliderText {
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .Slider {
+            padding-bottom: 40px;
+            width: 100%;
+        }
+
+        .SliderWrapper {
+            display: flex;
+            flex-grow: 1;
+            align-items: flex-start;
+            min-width: 300px;
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .Buttons {
+            padding-top: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+        }
+    }
+}

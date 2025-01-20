@@ -2,11 +2,12 @@
     font-size: 16px;
     padding: 12px;
     border-radius: 28px;
-    width: min-content;
+    width: max-content;
     display: flex;
     flex-direction: row;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+
 
     &.blue {
         color: #164E63;
@@ -51,6 +52,12 @@
         }
         &.battery {
             background-image: url('../../assets/BatteryLow.svg');
+        }
+        &.participate {
+            background-image: url('../../assets/Participator.svg');
+        }
+        &.settings {
+            background-image: url('../../assets/Settings.svg');
         }
     }
 }

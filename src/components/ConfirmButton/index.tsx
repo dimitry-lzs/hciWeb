@@ -7,6 +7,7 @@ export enum ButtonIcon {
     Settings = 'settings',
     Weather = 'weather',
     Battery = 'battery',
+    Participate = 'participate',
 }
 
 export enum ButtonColor {
@@ -15,10 +16,10 @@ export enum ButtonColor {
     Yellow = 'yellow',
 }
 
-export default function ConfirmButton({ icon, color }: { icon: ButtonIcon; color: ButtonColor }) {
+export default function ConfirmButton({ text, icon, color }: { text: string; icon: ButtonIcon; color: ButtonColor }) {
     return (
         <div className={`ConfirmButton ${color}`}>
-            Confirm
+            <div className="ConfirmButtonText">{text}</div>
             <div className={`ConfirmButtonIcon ${icon}`} />
         </div>
     );
