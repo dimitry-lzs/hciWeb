@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from '../../components/Header';
 import SpookyScarySkeleton from './SpookyScarySkeleton';
@@ -20,8 +20,39 @@ function Switch({ currentPole, prev, next }: { currentPole: number, prev: () => 
     );
 }
 
+function PoleController({ coordinates, setCoordinates, depth, setDepth }: { coordinates: { x: number, y: number }, setCoordinates: React.Dispatch<React.SetStateAction<{ x: number, y: number }>>, depth: number, setDepth: React.Dispatch<React.SetStateAction<number>> }) {
+    return (
+        <div className='PoleControls'>
+            <div className='PoleArrow left' onMouseDown={(event) => handleMouseDown(event, () => setCoordinates(oldCoordninates => ({ ...oldCoordninates, x: oldCoordninates.x - 1 })))} />
+            <div className='PoleArrow right' onMouseDown={(event) => handleMouseDown(event, () => setCoordinates(oldCoordninates => ({ ...oldCoordninates, x: oldCoordninates.x + 1 })))} />
+            <div className='PoleArrow forward' onMouseDown={(event) => handleMouseDown(event, () => setCoordinates(oldCoordninates => ({ ...oldCoordninates, y: oldCoordninates.y + 1 })))} />
+            <div className='PoleArrow backward' onMouseDown={(event) => handleMouseDown(event, () => setCoordinates(oldCoordninates => ({ ...oldCoordninates, y: oldCoordninates.y - 1 })))} />
+            <div className='Reset'
+                onClick={() => {
+                    setCoordinates({ x: 50, y: 50 });
+                    setDepth(150);
+                }} />
+            <div className='PoleCoordinate x'>{coordinates.x}</div>
+            <div className='PoleCoordinate y'>{coordinates.y}</div>
+            <div className='PoleArrow up' onMouseDown={(event) => handleMouseDown(event, () => setDepth(oldDepth => oldDepth - 1))} />
+            <div className='PoleDepth'>{`${depth}mm`}</div>
+            <div className='PoleArrow down' onMouseDown={(event) => handleMouseDown(event, () => setDepth(oldDepth => oldDepth + 1))} />
+        </div>
+    );
+}
+
+const handleMouseDown = (e: React.MouseEvent, handlerFunction: () => void) => {
+    e.preventDefault();
+    handlerFunction();
+    const interval = setInterval(handlerFunction, 100);
+    const handleMouseUp = () => clearInterval(interval);
+    window.addEventListener('mouseup', handleMouseUp);
+};
+
 export default function PolesSetupScreen() {
-    const [pole, setPole] = React.useState(1);
+    const [pole, setPole] = useState(1);
+    const [coordinates, setCoordinates] = useState({ x: 45, y: 55 });
+    const [depth, setDepth] = useState(150);
 
     return (
         <div className='PolesSetup'>
@@ -31,18 +62,7 @@ export default function PolesSetupScreen() {
                 <div className='PolesSettings'>
                     <div className='Controls'>
                         <Switch currentPole={pole} prev={() => setPole(currentPole => (currentPole - 1) % 6 || totalPoles)} next={() => setPole(currentPole => (currentPole + 1) % 6 || totalPoles)} />
-                        <div className='PoleControls'>
-                            <div className='PoleArrow left' />
-                            <div className='PoleArrow right' />
-                            <div className='PoleArrow forward' />
-                            <div className='PoleArrow backwards' />
-                            <div className='Reset' />
-                            <div className='PoleCoordinate x'>45</div>
-                            <div className='PoleCoordinate y'>55</div>
-                            <div className='PoleArrow up' />
-                            <div className='PoleDepth'>156mm</div>
-                            <div className='PoleArrow down' />
-                        </div>
+                        <PoleController coordinates={coordinates} setCoordinates={setCoordinates} depth={depth} setDepth={setDepth} />
                     </div>
                 </div>
             </div>

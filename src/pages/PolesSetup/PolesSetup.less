@@ -156,6 +156,93 @@
                         }
                     }
                 }
+
+                .PoleControls {
+                    position: relative;
+                    height: 100px;
+                    width: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .PoleArrow {
+                        position: absolute;
+                        cursor: pointer;
+                        width: 24px;
+                        height: 24px;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        background-image: url('../../assets/ChevronDown.svg');
+
+                        &.left {
+                            transform: rotate(90deg);
+                            top: 38px;
+                            left: 0px;
+                        }
+
+                        &.right {
+                            transform: rotate(-90deg);
+                            top: 38px;
+                            right: 0px;
+                        }
+
+                        &.forward {
+                            transform: rotate(180deg);
+                            top: 0px;
+                            left: 38px;
+                        }
+
+                        &.backward {
+                            transform: rotate(0deg);
+                            bottom: 0px;
+                            left: 38px;
+                        }
+
+                        &.up {
+                            top: 0;
+                            right: -38px;
+                            transform: rotate(180deg);
+                        }
+
+                        &.down {
+                            right: -38px;
+                            bottom: 0;
+                            transform: rotate(0deg);
+                        }
+                    }
+
+                    .Reset {
+                        cursor: pointer;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 6px;
+                        background-color: #737373;
+                    }
+
+                    .PoleDepth {
+                        font-size: 12px;
+                        position: absolute;
+                        top: 44px;
+                        right: -48px;
+                    }
+
+                    .PoleCoordinate {
+                        position: absolute;
+                        font-size: 12px;
+
+                        &.x {
+                            top: 43px;
+                            left: -12px;
+                        }
+
+                        &.y {
+                            bottom: -12px;
+                            left: 44px;
+                        }
+                    }
+                }
             }
         }
     }
