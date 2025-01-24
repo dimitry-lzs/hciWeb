@@ -1,0 +1,112 @@
+.Content {
+    .TentSkeleton {
+        position: relative;
+        background-image: url('../../assets/TentSkeleton.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 409px;
+        width: 500px;
+
+        .PoleLabel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 12px;
+            font-weight: bold;
+            color: #000;
+
+            &.one {
+                top: 304px;
+                left: -19px;
+            }
+
+            &.two {
+                top: 234px;
+                left: 153px;
+            }
+
+            &.three {
+                top: 191px;
+                left: 266px;
+            }
+
+            &.four {
+                top: 218px;
+                left: 423px;
+            }
+
+            &.five {
+                top: 278px;
+                left: 338px;
+            }
+
+            &.six {
+                top: 388px;
+                left: 188px;
+            }
+        }
+
+        .PoleArrows {
+            position: absolute;
+            top: 384px;
+            left: 241px;
+
+            .Arrow {
+                position: absolute;
+                background-image: url('../../assets/ChevronDown.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 15px;
+                width: 15px;
+
+                &.one {
+                    top: -18px;
+                    left: -28px;
+                    transform: rotate(122deg);
+                }
+
+                &.two {
+                    top: -27px;
+                    left: 27px;
+                    transform: rotate(-144deg);
+                }
+
+                &.three {
+                    top: 30px;
+                    left: -16px;
+                    transform: rotate(32deg);
+                }
+
+                &.four {
+                    top: 20px;
+                    left: 34px;
+                    transform: rotate(-59deg);
+                }
+            }
+
+            .UpDownArrow {
+                position: absolute;
+                top: 45px;
+                left: 2px;
+
+                .Up,
+                .Down {
+                    position: absolute;
+                    background-image: url('../../assets/ArrowSlim.svg');
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    height: 20px;
+                    width: 20px;
+                }
+
+                .Down {
+                    top: 14px;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}

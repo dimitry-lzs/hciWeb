@@ -15,6 +15,7 @@ import LightsMenu from './pages/LightsMenu';
 import CustomLighting from './pages/CustomLighting';
 import Weather from './pages/Weather';
 import Activities from './pages/Activities';
+import PolesSetup from './pages/PolesSetup';
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: '/tent-position',
                 element: <TentPosition />
+            },
+            {
+                path: '/poles-setup',
+                element: <PolesSetup />
             },
             {
                 path: '/cloths-setup',
