@@ -16,6 +16,8 @@ import CustomLighting from './pages/CustomLighting';
 import Weather from './pages/Weather';
 import Activities from './pages/Activities';
 import PolesSetup from './pages/PolesSetup';
+import SpecialOccasions from './pages/SpecialOccasions';
+import Energy from './pages/Energy';
 
 const router = createBrowserRouter([
     {
@@ -61,6 +63,14 @@ const router = createBrowserRouter([
             {
                 path: '/activities',
                 element: <Activities/>
+            },
+            {
+                path: '/special-occasions',
+                element: <SpecialOccasions/>
+            },
+            {
+                path: '/energy',
+                element: <Energy/>
             }
         ],
         errorElement: <ErrorScreen />
