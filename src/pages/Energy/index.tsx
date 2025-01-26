@@ -7,13 +7,13 @@ import InfoContainer, { InfoRow } from '../../components/InfoContainer';
 import ConfirmButton, { ButtonColor, ButtonIcon } from '../../components/ConfirmButton';
 import { useNavigate } from 'react-router-dom';
 import Select from '../../components/Select';
+import Switch from '../../components/Switch';
 
 export default function Energy() {
     const navigate = useNavigate();
     const coldHeat = [
         { value: 'cold', label: 'Cold' },
         { value: 'heat', label: 'Heat' },
-        { value: 'off', label: 'Off' },
     ];
     const temperatures = [
         { value: '16', label: '16' },
@@ -71,7 +71,7 @@ export default function Energy() {
                         </div>
                     </InfoContainer>
                     <InfoContainer>
-                        <div className='InfoTitle'>AC</div>
+                        <div className='InfoTitle'><div className='SwitchWrapper'>AC<Switch/></div></div>
                         <div className='Controls'>
                             <div className='InfoDescription'><Select options={coldHeat} /><div className='WindIcon' /></div>
                             <div className='InfoDescription'><Select options={temperatures} /><div className='ThermometerIcon' /></div>
