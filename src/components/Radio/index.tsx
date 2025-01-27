@@ -8,13 +8,15 @@ export default function Radio({ options = [], selectedValue = '', onChange = () 
 }) {
     return (
         <div className='radioContainer'>
-            {options.map(({ value, label }) => (
-                <label key={value} className='radioLabel'>
-                    <input type='radio' name='radio' value={value} checked={selectedValue === value} onChange={() => onChange(value)} />
-                    <span className='checkmark'></span>
-                    {label}
-                </label>
-            ))}
+            <form>
+                {options.map(({ value, label }) => (
+                    <label key={value} className='radioLabel'>
+                        <input type='radio' name='radio' value={value} checked={selectedValue === value} onChange={() => onChange(value)} />
+                        <span className='checkmark'></span>
+                        {label}
+                    </label>
+                ))}
+            </form>
         </div>
     );
 }
