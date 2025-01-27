@@ -3,12 +3,13 @@ import './Slider.less';
 
 const thumbWidth = 24;
 
-export default function Slider({ minValue = 0, maxValue = 100, type = '%' }: {
+export default function Slider({ value, setValue, minValue = 0, maxValue = 100, type = '%' }: {
+    value: number;
+    setValue: (value: number) => void;
     minValue?: number;
     maxValue?: number;
     type?: string;
 }) {
-    const [value, setValue] = useState(minValue + ((maxValue - minValue) / 2));
     const percentageValue = useMemo(() => (value - minValue) / ((maxValue - minValue) / 100), [value, minValue, maxValue]);
     const widthToBeAdded = useMemo(() => (thumbWidth / 2) - ((percentageValue / 100) * thumbWidth), [percentageValue]);
     return (
