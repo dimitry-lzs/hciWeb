@@ -1,6 +1,30 @@
 .Energy {
+    .HeatIcon, .ColdIcon {
+        background-image: url('../../assets/Sun.svg');
+        background-position: center;
+        background-size: 18px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+    }
+    .ColdIcon {
+        background-image: url('../../assets/Snowflake.svg');
+    }
     .Content {
         padding-top: 10px;
+    }
+    .LowBattery, .ChargedBattery {
+        background-image: url('../../assets/BatteryFull.svg');
+        background-position: center;
+        background-size: 18px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+    }
+    .LowBattery {
+        background-image: url('../../assets/BatteryLow.svg');
     }
 
     .PanelsRow {
@@ -34,27 +58,34 @@
     .Info {
         color: black;
         font-size: 11pt;
+        margin-right: auto;
     }
 
     .InfoDescription {
+        min-width: 130px;
         display: flex;
+        justify-content: space-between;
+        gap: 12px;
         font-size: 12pt;
         font-weight: bold;
         padding-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    .Green, .Yellow, .Red {
+        padding-left: 5px;
+        align-content: center;
     }
 
     .Green {
-        padding-left: 5px;
         color: rgb(0, 255, 47);
     }
 
     .Yellow {
-        padding-left: 5px;
         color: rgb(213, 213, 33);
     }
 
     .Red {
-        padding-left: 5px;
         color: rgb(198, 50, 50);
     }
 
@@ -85,6 +116,7 @@
 
     .ThermometerIcon {
         background-image: url('../../assets/thermometer.svg');
+        background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         display: inline-block;
@@ -109,6 +141,6 @@
     .SwitchWrapper {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 }

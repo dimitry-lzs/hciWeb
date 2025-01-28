@@ -6,7 +6,6 @@
         display: inline-block;
         width: 60px;
         height: 34px;
-        margin-left: 5px;
     }
 
     /* Hide default HTML checkbox */
@@ -27,6 +26,16 @@
         background-color: #ccc;
         -webkit-transition: .4s;
         transition: .4s;
+
+        .switchIcon {
+            position: absolute;
+            top: 17px;
+            left: 17px;
+            height: 26px;
+            width: 26px;
+            transform: translate(-50%, -50%);
+            transition: all 0.4s ease; /* Add transition */
+        }
     }
 
     .slider:before {
@@ -41,12 +50,14 @@
         transition: .4s;
     }
 
-    input:checked+.slider {
-        background-color: #2196F3;
+    input:checked~.slider {
+        .switchIcon {
+            transform: translate(13px, -50%);
+        }
     }
 
-    input:focus+.slider {
-        box-shadow: 0 0 1px #2196F3;
+    input:checked+.slider {
+        background-color: #2196F3;
     }
 
     input:checked+.slider:before {
