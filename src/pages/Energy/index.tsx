@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Big from 'big.js';
 
@@ -9,8 +9,9 @@ import InfoContainer from '../../components/InfoContainer';
 import Switch from '../../components/Switch';
 import Slider from '../../components/Slider';
 
-import './Energy.less';
 import SolarPanel from './SolarPanel';
+
+import './Energy.less';
 
 function HeatIcon() {
     return <div className='HeatIcon' />;
@@ -26,6 +27,43 @@ function LowBattery() {
 
 function ChargedBattery() {
     return <div className='ChargedBattery' />;
+}
+
+function Increase(value: number) {
+    return value + 1;
+}
+
+function Decrease(value: number) {
+    return value - 1;
+}
+
+function GetStepper(value: number, stepper: (value: number) => number) {
+    if (value > 99) {
+        return Decrease;
+    }
+    if (value < 1) {
+        return Increase;
+    }
+    return stepper;
+}
+
+function RandomIntervalDelay() {
+    return Math.round(Math.random() * 1000);
+}
+
+function ValueChanger(initialValue: number, valueSetter: React.Dispatch<React.SetStateAction<number>>): number {
+    let stepper = Increase;
+    stepper = GetStepper(initialValue, stepper);
+
+    const interval = setInterval(() => {
+        valueSetter((oldValue: number) => {
+            stepper = GetStepper(oldValue, stepper);
+            const newValue = stepper(oldValue);
+            return newValue;
+        });
+    }, RandomIntervalDelay());
+
+    return interval as unknown as number;
 }
 
 export default function Energy() {
@@ -65,6 +103,17 @@ export default function Energy() {
                 ? new Big(temperature).mul(30)
                 : 0).round(2);
     }, [ac, lowBatteryMode, temperature]);
+
+    useEffect(() => {
+        const interval1 = ValueChanger(panel1Exposure, setPanel1Exposure);
+        const interval2 = ValueChanger(panel2Exposure, setPanel2Exposure);
+        const interval3 = ValueChanger(panel3Exposure, setPanel3Exposure);
+        return () => {
+            clearInterval(interval1);
+            clearInterval(interval2);
+            clearInterval(interval3);
+        };
+    }, []);
 
     return (
         <div className='Energy'>
