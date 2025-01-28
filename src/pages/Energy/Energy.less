@@ -1,4 +1,16 @@
 .Energy {
+    .HeatIcon, .ColdIcon {
+        background-image: url('../../assets/Sun.svg');
+        background-position: center;
+        background-size: 18px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+    }
+    .ColdIcon {
+        background-image: url('../../assets/Snowflake.svg');
+    }
     .Content {
         padding-top: 10px;
     }
@@ -34,13 +46,18 @@
     .Info {
         color: black;
         font-size: 11pt;
+        margin-right: auto;
     }
 
     .InfoDescription {
+        min-width: 130px;
         display: flex;
+        justify-content: space-between;
+        gap: 12px;
         font-size: 12pt;
         font-weight: bold;
         padding-top: 8px;
+        margin-bottom: 8px;
     }
 
     .Green {
@@ -85,6 +102,7 @@
 
     .ThermometerIcon {
         background-image: url('../../assets/thermometer.svg');
+        background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         display: inline-block;
@@ -109,6 +127,6 @@
     .SwitchWrapper {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 }
