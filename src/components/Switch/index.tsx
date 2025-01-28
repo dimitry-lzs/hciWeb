@@ -8,7 +8,8 @@ export default function Switch({
     onIcon,
     offIcon,
     onColor,
-    offColor
+    offColor,
+    disabled
 }: {
     on: boolean;
     setOnOff: (on: boolean) => void;
@@ -16,11 +17,12 @@ export default function Switch({
     offIcon?: JSX.Element;
     onColor?: string;
     offColor?: string;
+    disabled?: boolean;
 }) {
     return (
         <div className='switchComponent'>
-            <label className='switch'>
-                <input type='checkbox' checked={on} onChange={checked => {
+            <label className={`switch ${disabled ? 'disabled' : ''}`}>
+                <input disabled={disabled} type='checkbox' checked={on} onChange={checked => {
                     setOnOff(checked.target.checked);
                 }} />
                 <span className='slider round' {...(on ? { style: { backgroundColor: onColor } } : { style: { backgroundColor: offColor } })}>

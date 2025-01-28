@@ -16,6 +16,7 @@
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
+    "big.js": "^5.2.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -33,6 +34,7 @@
     "@babel/preset-react": "^7.22.15",
     "@babel/preset-typescript": "^7.23.2",
     "@babel/runtime": "^7.23.2",
+    "@types/big.js": "^6.2.2",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
