@@ -20,7 +20,9 @@
         - Add operability so when user selects a preset, dummy values for lighting, color, switching patterns, etc. are set.
     
     - For Energy Management Page:
-        - Add operability when user turns on `Power-saving mode`. Air condition should be automatically turned off and and current energy consumption value should be dropped.
+        - Add random values for sun exposure and energy capacity for each time the page is loaded.
+
+        - Add operability when user turns on `Power-saving mode`. Air condition should be automatically turned off and current energy consumption value should be dropped.
 
     - Weather Page, Activities Page, are ok for now.
 
