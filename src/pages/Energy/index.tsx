@@ -19,11 +19,20 @@ function ColdIcon() {
     return <div className='ColdIcon' />;
 }
 
+function LowBattery() {
+    return <div className='LowBattery' />;
+}
+
+function ChargedBattery() {
+    return <div className='ChargedBattery' />;
+}
+
 export default function Energy() {
     const navigate = useNavigate();
     const [temperature, setTemperature] = useState(20);
     const [heat, setHeat] = useState(false);
     const [ac, setAc] = useState(false);
+    const [lowBatteryMode, setLowBatteryMode] = useState(false);
 
     return (
         <div className='Energy'>
@@ -70,6 +79,7 @@ export default function Energy() {
                         </div>
                         <div className='InfoDescription'>
                             <div className='Green'>Energy is Enough!</div>
+                            <Switch on={lowBatteryMode} setOnOff={setLowBatteryMode} onIcon={<LowBattery />} offIcon={<ChargedBattery />} onColor={'#F0B40A'} offColor='#24D459' />
                         </div>
                     </InfoContainer>
                     <InfoContainer>
@@ -88,9 +98,6 @@ export default function Energy() {
                             </div>
                         </div>
                     </InfoContainer>
-                </div>
-                <div className='ButtonContainer'>
-                    <ConfirmButton text='Power Saving Mode' icon={ButtonIcon.Battery} color={ButtonColor.Yellow} />
                 </div>
                 <div className='NavigationButton'>
                     <BackButton navigate={() => navigate(-1)} />
