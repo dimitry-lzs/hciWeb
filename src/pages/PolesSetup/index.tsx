@@ -58,7 +58,7 @@ export default function PolesSetupScreen() {
         <div className='PolesSetup'>
             <Header title='Poles Setup' />
             <div className='Content'>
-                <SpookyScarySkeleton />
+                <SpookyScarySkeleton selectedPole={pole as keyof {}} />
                 <div className='PolesSettings'>
                     <div className='Controls'>
                         <Switch currentPole={pole} prev={() => setPole(currentPole => (currentPole - 1) % 6 || totalPoles)} next={() => setPole(currentPole => (currentPole + 1) % 6 || totalPoles)} />
