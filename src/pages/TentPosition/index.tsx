@@ -77,8 +77,8 @@ export default function TentPosition() {
 
     return (
         <div>
-            <Header title='Tent Position' helpContent={<HelpModal title='Tent Positioning' text='Click where in the map you would like to place your tent. You may take advice from each spots unique characteristics.' />}/>
-            <div className='Content'>
+            <Header title='Tent Position' helpContent={<HelpModal title='Tent Positioning' text='Click where in the map you would like to place your tent. You may take advice from each spots unique characteristics.' />} />
+            <div className='Content tentPosition'>
                 <div className='MapContainer'>
                     <Map chosenCoordinates={chosenCoordinates} hoverCoordinates={setCoordinates} chooseCoordinates={chooseCoordinates} />
                     <div className='MapControls'>
@@ -94,7 +94,7 @@ export default function TentPosition() {
                                 </>
                             )}
                         </InfoContainer>
-                        <ConfirmButton text='Confirm' icon={ButtonIcon.Tick} color={ButtonColor.Green} onClick={() => navigate('/poles-setup')} />
+                        {(chosenCoordinates && chosenCoordinates.y) ? <ConfirmButton text='Confirm' icon={ButtonIcon.Tick} color={ButtonColor.Green} onClick={() => navigate('/poles-setup')} /> : null}
                     </div>
                 </div>
                 <div className='NavigationButton'>

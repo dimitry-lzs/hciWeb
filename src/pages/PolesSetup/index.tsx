@@ -5,6 +5,11 @@ import SpookyScarySkeleton from './SpookyScarySkeleton';
 
 import './PolesSetup.less';
 
+import InfoContainer from '../../components/InfoContainer';
+import ConfirmButton, { ButtonColor, ButtonIcon } from '../../components/ConfirmButton';
+import BackButton from '../../components/BackButton';
+import { useNavigate } from 'react-router-dom';
+
 const totalPoles = 6;
 
 interface Coordinates {
@@ -14,6 +19,15 @@ interface Coordinates {
     'four': { x: number, y: number, depth: number },
     'five': { x: number, y: number, depth: number },
     'six': { x: number, y: number, depth: number }
+}
+
+const enum Poles {
+    one = 'one',
+    two = 'two',
+    three = 'three',
+    four = 'four',
+    five = 'five',
+    six = 'six'
 }
 
 function Switch({ currentPole, prev, next }: { currentPole: number, prev: () => void, next: () => void }) {
@@ -70,6 +84,8 @@ const handleMouseDown = (e: React.MouseEvent, handlerFunction: () => void) => {
 };
 
 export default function PolesSetupScreen() {
+    const navigate = useNavigate();
+
     const [pole, setPole] = useState(1);
 
     const [coordinates, setCoordinates] = useState<Coordinates>({
@@ -103,7 +119,67 @@ export default function PolesSetupScreen() {
                         <Switch currentPole={pole} prev={() => setPole(currentPole => (currentPole - 1) % 6 || totalPoles)} next={() => setPole(currentPole => (currentPole + 1) % 6 || totalPoles)} />
                         <PoleController selectedPole={selectedPole} coordinates={coordinates} setCoordinates={setCoordinates} />
                     </div>
+                    <div className='Parameters'>
+                        <InfoContainer>
+                            <div className='ParametersTitle'>Current Poles Settings</div>
+                            <div className='ParametersContent'>
+                                {Object.keys(coordinates).map((value, index) =>
+                                    <div className='Parameter' key={index}>
+                                        <div className='Pole'>{`Pole ${index + 1}`}</div>
+                                        <div className='ParameterRow'>
+                                            <div className='ParameterName'>X</div>
+                                            <div className='ParameterValue'>{`${coordinates[value as Poles].x}`}</div>
+                                        </div>
+                                        <div className='ParameterRow'>
+                                            <div className='ParameterName'>Y</div>
+                                            <div className='ParameterValue'>{`${coordinates[value as Poles].y}`}</div>
+                                        </div>
+                                        <div className='ParameterRow'>
+                                            <div className='ParameterName'>D</div>
+                                            <div className='ParameterValue'>{`${coordinates[value as Poles].depth}mm`}</div>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </InfoContainer>
+                        <ConfirmButton color={ButtonColor.Blue} text='Apply suggested settings' icon={ButtonIcon.Settings} onClick={() => setCoordinates({
+                            one: {
+                                x: Math.round(Math.random() * 30) + 10,
+                                y: Math.round(Math.random() * 30) + 10,
+                                depth: Math.round(Math.random() * 100) + 110
+                            },
+                            two: {
+                                x: Math.round(Math.random() * 30) + 10,
+                                y: Math.round(Math.random() * 30) + 10,
+                                depth: Math.round(Math.random() * 100) + 110
+                            },
+                            three: {
+                                x: Math.round(Math.random() * 30) + 10,
+                                y: Math.round(Math.random() * 30) + 10,
+                                depth: Math.round(Math.random() * 100) + 110
+                            },
+                            four: {
+                                x: Math.round(Math.random() * 30) + 10,
+                                y: Math.round(Math.random() * 30) + 10,
+                                depth: Math.round(Math.random() * 100) + 110
+                            },
+                            five: {
+                                x: Math.round(Math.random() * 30) + 10,
+                                y: Math.round(Math.random() * 30) + 10,
+                                depth: Math.round(Math.random() * 100) + 110
+                            },
+                            six: {
+                                x: Math.round(Math.random() * 30) + 10,
+                                y: Math.round(Math.random() * 30) + 10,
+                                depth: Math.round(Math.random() * 100) + 110
+                            }
+                        })} />
+                        <ConfirmButton color={ButtonColor.Green} text='Save Settings' icon={ButtonIcon.Tick} onClick={() => navigate('/')} />
+                    </div>
                 </div>
+            </div>
+            <div className='NavigationButton'>
+                <BackButton navigate={() => navigate(-1)} />
             </div>
         </div>
     );

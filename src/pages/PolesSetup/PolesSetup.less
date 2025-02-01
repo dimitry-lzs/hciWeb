@@ -2,6 +2,7 @@
     .Content {
         display: flex;
         flex-direction: row;
+        padding-top: 20px;
 
         .TentSkeleton {
             position: relative;
@@ -152,6 +153,7 @@
                 .PoleSwitch {
                     display: flex;
                     flex-direction: column;
+                    width: 170px;
 
                     .PoleLabel {
                         font-size: 15px;
@@ -198,6 +200,7 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    margin-bottom: 26px;
 
                     .PoleArrow {
                         position: absolute;
@@ -277,6 +280,54 @@
                     }
                 }
             }
+            .Parameters {
+                .InfoContainer {
+                    .ParametersTitle {
+                        font-weight: bold;
+                        font-size: 18px;
+                        padding-bottom: 8px;
+                    }
+                    .ParametersContent {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 10px;
+
+                        .Parameter {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .Pole {
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+
+                            .ParameterRow {
+                                display: flex;
+                                flex-direction: row;
+                                gap: 10px;
+                                align-items: center;
+
+                                .ParameterName {
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                }
+                                .ParameterValue {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+    }
+    .NavigationButton {
+        margin-top: 20px;
+    }
+    .ConfirmButton {
+        margin-bottom: 20px;
     }
 }
