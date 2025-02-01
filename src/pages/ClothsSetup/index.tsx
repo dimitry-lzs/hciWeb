@@ -39,7 +39,11 @@ export default function ClothsSetupScreen() {
                 <div className='ClothsSettings'>
                     {ValidityMessage(positionValidity)}
                     <ConfirmButton color={ButtonColor.Blue} text='Apply suggested settings' icon={ButtonIcon.Weather} onClick={() => setAutoPosition(true)} />
-                    <ConfirmButton color={ButtonColor.Green} text='Save changes' icon={ButtonIcon.Tick} onClick={() => navigate('/')} />
+                    {positionValidity !== ClothPosition.invalid
+                        ? (
+                            <ConfirmButton color={ButtonColor.Green} text='Save changes' icon={ButtonIcon.Tick} onClick={() => navigate('/')} />
+                        )
+                        : <div style={{ height: '42px' }} />}
                 </div>
             </div>
             <div className='NavigationButton'>
