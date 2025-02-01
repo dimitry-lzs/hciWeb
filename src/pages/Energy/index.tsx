@@ -48,7 +48,7 @@ function GetStepper(value: number, stepper: (value: number) => number) {
 }
 
 function RandomIntervalDelay() {
-    return Math.round(Math.random() * 1000);
+    return Math.round(Math.random() * 3000) + 500;
 }
 
 function ValueChanger(initialValue: number, valueSetter: React.Dispatch<React.SetStateAction<number>>): number {
