@@ -1,4 +1,4 @@
-# User Manual for Smart Camping Application (Tsadiree)
+# User Manual for Smart Camping Application (TsaDiree)
 **Developed by:** Dimitrios Lazanas P22082, Antonios Tsalmpouris P22272
 ### Overview
 The **Smart Camping** application is your ultimate digital solution for an enjoyable and stress-free camping experience. This manual provides a comprehensive guide on how to use the features of the app. Whether you're setting up your tent, finding the best spot, or customizing your campsite environment, this manual will help you navigate the app with ease.
@@ -45,30 +45,39 @@ Upon opening the app, you'll be greeted by the **Main Menu**. From here, you can
 1. Navigate to the **Tent Setup** section from the Main Menu.
 2. A map interface will help you locate the ideal spot for your tent.
 3. Review detailed information about each spot, such as soil stability,moisture level, and sun exposure.
-4. You can follow the app's recommendations for the best spot by clicking the **Apply Recommendations** button.
-5. Once you’ve chosen your spot, click **Confirm** to proceed.
+4. When you have found your desired spot, simply click on it.
+5. Once you’ve clicked on your spot, click **Confirm** to proceed.
+
+
+Alternatively, you may follow app's recommendations for the best spot by clicking the blue `Apply Recommendations` button.
 
 <img src='./screenshots/TentPosition.png' width=60% style='border: 1px solid black;'>
 
 ---
 
 ### Setting Up Your Tent
-1. After confirming your location, you will be directed to the **Tent Setup**.
-2. Follow the interactive instructions to:
-   - Secure tent poles at the correct angles.
-   - Apply appropriate pressure for stability.
-3. Use the app’s system recommendations for best practices by clicking the **Apply Suggested Settings** button.
+After confirming your location, you will be directed to the **Tent Setup**.
+To complete your tent setup process, follow the steps described bellow:
+   1. Using the horizontal arrows, select which pole you would like to place.
+   2. Use the arrows to adjust pole's location.
+   3. Use the arrows to install the pole into your desired depth.
+   4. Repeat the same process for the other poles.
+
+ Alternatively, for optimal pole placement, you may choose to apply system recommendations, simply by clicking the blue `Apply Suggested Settings` button.
 
 <img src='./screenshots/TentSetup.png' width=60% style='border: 1px solid black;'>
 
 ---
-<div style="page-break-after: always;"></div>
 
 ### Placing Protective Cloths
+Whether you are setting up your tent for the first time, or you want to make any adjument on the proctive cloth, you may follow the steps bellow:
 1. Navigate to the **Cloths** section.
-2. You can manually position the cloths around your tent:
-   - Drag and drop the cloths to your preferred locations.
-3. Alternatively, click **Apply Suggested Settings** to automatically position the cloths for optimal wind protection.
+2. Simply **drag & drop** the cloth that you see on the screen on your desired location.
+3. System will provide you feedback about the validity of your choice.
+4. If required by the system, **drag & drop** the cloth again until it meets systems requirements.
+5. When you are done, click on the green `Save changes` button.
+
+Alternatively, you may click the blue `Apply Suggested Settings` button, which automatically positions the cloths ensuring optimal wind protection.
 
 <img src='./screenshots/ClothsPlacement.png' width=60% style='border: 1px solid black;'>
 
@@ -78,21 +87,28 @@ Upon opening the app, you'll be greeted by the **Main Menu**. From here, you can
 The app provides flexible lighting controls to ensure your campsite is well-lit and inviting. To select whether you want to make custom lighting settings, or pick one of the presets for special occasions, you have to click to the corresponding button of the following menu:
 
 <img src="./screenshots/LightsMenu.png" width=60% style='border: 1px solid black;'> 
-<div style="page-break-after: always;"></div>
 
 #### Custom Lighting Settings
+To set up custom lighting conditions follow these steps:
 1. Open the **Lighting** menu and select **Custom Lighting**.
 2. Adjust the following parameters:
-   - **Color**: Choose your preferred hue using the color selector.
-   - **Brightness**: Slide the on-screen slider to increase or decrease brightness.
-3. If you're unsure about your selections, click **Apply Suggestions** for recommended settings.
+   - **Brightness**: Slide the on-screen slider to increase or decrease light brightness.
+   - **Warmth**: Using the slider adjust your light's warmth level.
+3. When you are satisfied, click on the green `Save settings` button.
+
+**Tip:** While experimenting with the sliders, take advantage of the virtual lamp, which provides feedback for you in order to get a taste of the changes you make.
+
+If you don't have time for that, click the blue `Apply Suggestions` button to use recommended settings.
 
 <img src='./screenshots/CustomLighting.png' width=60% style='border: 1px solid black;'>
 
 #### Lighting for Special Occasions
-1. Navigate to the **Special Occasions** menu.
-2. Choose from preset lighting scenarios (e.g., party mode, sports mode).
-3. Click **Save changes** to apply your selected theme.
+To select lighting conditions meant for special occasions, follow these steps:
+1. Navigate to the **Lighting Menu** and then onto **Special Occasions** page.
+2. Using the corresponding select box, choose one from the preset lighting scenarios (e.g., party mode, concert mode).
+3. You will notice that the rest of the fields including the *colors*, *ligh play*, and *color switching pattern* will autocomplete themselves.
+4. You are still able to make any change you want into the autocompleted fields simply by interacting with their controls. 
+3. When you are satisfied, click the green **Save changes** button to apply your special theme.
 
 <img src="./screenshots/SpecialOccasions.png" width=60% style='border: 1px solid black;'>
 
@@ -105,19 +121,21 @@ In this page, you can be informed about the energy available from the solar pane
 The solar panels on top of the tent need sunlight to generate energy. Check the `Sun Exposure` value on this page to see if the panels are producing enough energy.
 
 #### Energy Management
-The blue box in the center of the page shows **current energy capacity and consumption**. If capacity exceeds consumption, the text will be green. If not, the text will be red, indicating the need to **enable power-saving mode**.
-- To enable power-saving mode, press the yellow button.
+The green box in the center of the page shows **current energy capacity and consumption**. If capacity exceeds consumption, the text will be green. If not, the text will be red, indicating the need to **enable power-saving mode**.
+- **To enable power-saving mode**, press the switch that has a battery icon.
+- Once you have pressed the switch, you will notice AC to be automatically turned off, and your energy consumption to drop.
 
 #### Air-Conditioning
-This page gives you access to adjust **Air-Conditioning settings**.
-1. Using the switch you can toggle AC on/off.
-2. Next, you have to select whether you want AC to transmit cold or warm air, by clicking on the corresponding option in the combobox.
-3. Finally, adjust the slider to you desired temperature. AC you will start make you feel more comfortable!
+This page gives you access to adjust **Air-Conditioning settings**. To use the Air Condition follow these instructions.
+1. To turn the AC ON/OFF, use the switch at the top of AC's container.
+2. Next, you have to select whether you want AC to transmit cold or warm air, by using the corresponding switch. When you are in cold mode, the switch will be blue, and when in heat mode the switch will be red.
+3. Finally, virtually sliding on the slider, select your desired temperature. 
+
+AC you will start now making you feel more comfortable!
 
 <img src='./screenshots/EnergyManagement.png' width=60% style='border: 1px solid black;'>
 
 ---
-<div style="page-break-after: always;"></div>
 
 ### Checking the Weather
 Weather page is designed to inform you about the environmental conditions outside the tent. In detail you can get information about:
@@ -142,8 +160,6 @@ When placing your order you are just 5 clicks away from gettings your food deliv
 3. Now, pick the desired arrival time of the order (breakfast, dinner, lunch).
 4. Lastly, pick a payment method (payment on arrival, charge your account).
 
-<div style="page-break-after: always;"></div>
-
 #### Viewing past orders
 On the right side of the screen you are able to see your `ordering history`. There, you can find information about all the orders you have made, including what you had ordered, order status (pending or delivered) and the payment method you used.
 
@@ -160,7 +176,9 @@ Right at the center of the page you can find the `chat-box` that you may use whe
 ### Engaging in Camping's activities
 In this page you can get informed about all the `upcoming-scheduled activities` in the camping. For each activity you can see what it is about. the place time it will take place, and until the deadline upon which the admission period ends. 
 
-To actively take part into an activity you have to **get your admission**. To do so, simply click the `green button` under activities info. If you have already applied for an activity, this button will be yellow so you know you have already taken admission.
+To actively take part into an activity you have to **get your admission**. To do so, simply click the green `Participate` button under activities info. 
+
+**Notice:** If you have already applied for an activity, this button will be yellow so you know you have already taken admission.
 
 <img src='./screenshots/Activities.png' width=60% style='border: 1px solid black;'>
 

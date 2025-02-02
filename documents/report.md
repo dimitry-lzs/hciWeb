@@ -1,4 +1,4 @@
-# Technical Report for Smart Camping Application (Tsadiree)
+# Technical Report for Smart Camping Application (TsaDiree)
 **Developed by:** Dimitrios Lazanas P22082, Antonios Tsalmpouris P22272
 ## Table of Contents
 1. [Prototyping](#prototyping)
