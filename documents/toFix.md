@@ -19,4 +19,4 @@
 
 - Online help text should accept bullets so the text there becomes more instruction-type.
 
-- Write proper technical report.
+- Review Technical Report (Check key functionalities, maybe add more details).
