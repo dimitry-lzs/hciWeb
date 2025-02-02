@@ -1,5 +1,5 @@
 <div style="display: flex; align-items: center;">
-  <img src="../src/assets/Logo.png" alt="Smart Camping App Logo" width="80" style="margin-right: 10px;"/>
+  <img src="./src/assets/Logo.png" alt="Smart Camping App Logo" width="80" style="margin-right: 10px;"/>
   <h1 style="margin: 0;">Technical Report for Smart Camping Application (TsaDiree)</h1>
 </div>
 
