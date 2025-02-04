@@ -189,6 +189,13 @@ export default function Efood() {
         }
     }, [response]);
 
+    const sendMessageToStaff = (message: string) => {
+        const delay = Math.round(Math.random() * 7e3 + 1500);
+        setTimeout(() => {
+            sendMessage(message);
+        }, delay);
+    };
+
     return (
         <div className='Efood'>
             <Header title='Order Food' helpContent={
@@ -255,7 +262,7 @@ export default function Efood() {
                             if (event.key === 'Enter' && messageText.trim()) {
                                 setMessages(oldMessages => [...oldMessages, { text: messageText, incoming: false }]);
                                 const ordersInfo = orders.map(order => `Restaurant: ${order.restaurant.label}, Item ordered: ${order.food}, Payment method: ${order.paymentMethod.label}`).join(' ');
-                                sendMessage(ordersInfo + ', USER says: ' + messageText);
+                                sendMessageToStaff(ordersInfo + ', USER says: ' + messageText);
                                 setMessageText('');
                             }
                         }} />
@@ -263,7 +270,7 @@ export default function Efood() {
                             if (messageText?.trim()) {
                                 setMessages(oldMessages => [...oldMessages, { text: messageText?.trim(), incoming: false }]);
                                 const ordersInfo = orders.map(order => `Restaurant: ${order.restaurant.label}, Item ordered: ${order.food}, Payment method: ${order.paymentMethod.label}`).join(' ');
-                                sendMessage(ordersInfo + ', USER says: ' + messageText);
+                                sendMessageToStaff(ordersInfo + ', USER says: ' + messageText);
                                 setMessageText('');
                             }
                         }} />

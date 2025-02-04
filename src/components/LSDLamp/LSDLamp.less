@@ -1,44 +1,59 @@
+@green: #65DE1A;
+@green-hover: #00cc00;
+
+@ham-blue: #7A82BC;
+@ham-blue-hover: #5d66a8;
+
+@blue: #3457D5;
+@blue-hover: #0000cc;
+
+@purple: #D31CE0;
+@purple-hover: #7700cc;
+
+@yellow: #daa14e;
+@yellow-hover: #bc8128;
+
 #lightBulb {
     cursor: pointer;
     transition: fill 0.6s ease;
 
     &.green {
-        fill: #65DE1A;
+        fill: @green;
 
         &:hover {
-            fill: #00cc00;
+            fill: @green-hover;
         }
     }
 
     &.hamBlue {
-        fill: #7A82BC;
+        fill: @ham-blue;
 
         &:hover {
-            fill: #5d66a8;
+            fill: @ham-blue-hover;
         }
     }
 
     &.blue {
-        fill: #3457D5;
+        fill: @blue;
 
         &:hover {
-            fill: #0000cc;
+            fill: @blue-hover;
         }
     }
 
     &.purple {
-        fill: #D31CE0;
+        fill: @purple;
 
         &:hover {
-            fill: #7700cc;
+            fill: @purple-hover;
         }
     }
 
     &.yellow {
-        fill: #daa14e;
+        fill: @yellow;
 
         &:hover {
-            fill: #bc8128;
+            fill: @yellow-hover;
         }
     }
 }
