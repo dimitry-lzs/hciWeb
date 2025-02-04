@@ -14,6 +14,11 @@ export default function CustomLighting() {
     const [brightness, setBrightness] = useState(700);
     const [warmth, setWarmth] = useState(4000);
 
+    const applySuggestedSettings = () => {
+        setBrightness(1500); 
+        setWarmth(3000); 
+    };
+
     return (
         <div className='CustomLighting'>
             <Header title='Custom Lighting Settings' helpContent={<HelpModal title='Custom Lighting' text='Use the sliders to customly adjust the lighting.' />} />
@@ -38,8 +43,8 @@ export default function CustomLighting() {
                             </div>
                         </div>
                         <div className='Buttons'>
-                            <ConfirmButton text='Save settings' icon={ButtonIcon.Tick} color={ButtonColor.Green} />
-                            <ConfirmButton text='Apply Suggested Settings' icon={ButtonIcon.Weather} color={ButtonColor.Blue} />
+                            <ConfirmButton text='Save settings' icon={ButtonIcon.Tick} color={ButtonColor.Green} onClick={() => navigate('/')}/>
+                            <ConfirmButton text='Apply Suggested Settings' icon={ButtonIcon.Weather} color={ButtonColor.Blue} onClick={applySuggestedSettings} />
                         </div>
                     </div>
                 </div>

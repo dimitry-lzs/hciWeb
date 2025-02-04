@@ -4,9 +4,6 @@
 
 - Add Interactivity to every page (
 
-    - For Custom Lighting Page:
-        - Make `Apply Suggested Settings` button to set dummy values to lighting settings.
-
     - For Special Occasions Page:
         - Add operability so when user selects a preset, dummy values for lighting, color, switching patterns, etc. are set.
 )
