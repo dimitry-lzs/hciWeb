@@ -8,6 +8,7 @@ export enum ButtonIcon {
     Weather = 'weather',
     Battery = 'battery',
     Participate = 'participate',
+    Navigate = 'navigate',
 }
 
 export enum ButtonColor {
