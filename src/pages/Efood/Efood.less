@@ -34,7 +34,7 @@
             .OrdersList {
                 display: flex;
                 flex-direction: column;
-                gap: 12px;
+                gap: 18px;
                 width: 100%;
                 overflow-y: auto;
                 max-height: 400px;
@@ -93,6 +93,21 @@
                             align-items: center;
                             gap: 5px;
                             font-size: 14px;
+
+                            .RetaurantIcon {
+                                height: 32px;
+                                width: 32px;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+
+                                &.gla {
+                                    background-image: url('../../assets/gla.png');
+                                }
+                                &.lph {
+                                    background-image: url('../../assets/lph.png');
+                                }
+                            }
 
                             .PaymentMethodIcon {
                                 height: 24px;

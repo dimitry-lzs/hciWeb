@@ -78,7 +78,7 @@ function Order({ order }: { order: { restaurant: { value: string, label: string 
     return (
         <div className='OrderItem'>
             <div className='OrderNumber'>Order #123</div>
-            <div className='OrderDetailsRow'>Restaurant: {order.restaurant.label} <span className={`RetaurantIcon ${order.restaurant.value}`}></span></div>
+            <div className='OrderDetailsRow'>Restaurant: <span className='Value'>{order.restaurant.label}<span className={`RetaurantIcon ${order.restaurant.value}`}></span></span></div>
             <div className='OrderDetailsRow'>{order.food}</div>
             <div className='OrderDetailsRow'>
                 Total:
