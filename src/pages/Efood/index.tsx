@@ -230,7 +230,7 @@ export default function Efood() {
                             if (event.key === 'Enter' && messageText.trim()) {
                                 setMessages(oldMessages => [...oldMessages, { text: messageText, incoming: false }]);
                                 const ordersInfo = orders.map(order => `Restaurant: ${order.restaurant.label}, Item ordered: ${order.food}, Payment method: ${order.paymentMethod.label}`).join(' ');
-                                sendMessage(ordersInfo + ' ' + messageText);
+                                sendMessage(ordersInfo + ', USER says: ' + messageText);
                                 setMessageText('');
                             }
                         }} />
@@ -238,7 +238,7 @@ export default function Efood() {
                             if (messageText?.trim()) {
                                 setMessages(oldMessages => [...oldMessages, { text: messageText?.trim(), incoming: false }]);
                                 const ordersInfo = orders.map(order => `Restaurant: ${order.restaurant.label}, Item ordered: ${order.food}, Payment method: ${order.paymentMethod.label}`).join(' ');
-                                sendMessage(ordersInfo + ' ' + messageText);
+                                sendMessage(ordersInfo + ', USER says: ' + messageText);
                                 setMessageText('');
                             }
                         }} />
