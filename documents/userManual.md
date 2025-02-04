@@ -10,26 +10,25 @@ The **Smart Camping** application is your ultimate digital solution for an enjoy
 ---
 
 ### Table of Contents
-1. [Main Menu](#main-menu)
-2. [Finding the Perfect Spot for Your Tent](#finding-the-perfect-spot-for-your-tent)
-3. [Setting Up Your Tent](#setting-up-your-tent)
-4. [Placing Protective Cloths](#placing-protective-cloths)
-5. [Adjusting Light Settings](#adjusting-light-settings)
-    - [Custom Lighting Settings](#custom-lighting-settings)
-    - [Lighting for Special Occasions](#lighting-for-special-occasions)
-6. [Energy Management - AC](#managing-solar-energy-and-adjusting-the-ac)
-    - [Solar Panels](#solar-panels)
-    - [Energy Management](#energy-management)
-    - [Air-Conditioning](#air-conditioning)
-7. [Checking the Weather](#checking-the-weather)
-8. [Ordering Food](#ordering-food)
-    - [Placing an order](#placing-an-order)
-    - [Viewing Past Orders](#viewing-past-orders)
-    - [Chatting with the Staff](#chatting-with-the-staff)
-9. [Engaging in Camping's Activities](#engaging-in-campings-activities)
-10. [Using the Map](#using-the-map)
-11. [Notes](#notes)
-12. [Conclusion](#conclusion)
+- [Finding the Perfect Spot for Your Tent](#finding-the-perfect-spot-for-your-tent)
+- [Setting Up Your Tent](#setting-up-your-tent)
+- [Placing Protective Cloths](#placing-protective-cloths)
+- [Adjusting Light Settings](#adjusting-light-settings)
+  - [Custom Lighting Settings](#custom-lighting-settings)
+  - [Lighting for Special Occasions](#lighting-for-special-occasions)
+- [Managing Solar Energy and Adjusting the AC](#managing-solar-energy-and-adjusting-the-ac)
+  - [Solar Panels](#solar-panels)
+  - [Energy Management](#energy-management)
+  - [Air-Conditioning](#air-conditioning)
+- [Checking the Weather](#checking-the-weather)
+- [Ordering food](#ordering-food)
+  - [Placing an order](#placing-an-order)
+  - [Viewing past orders](#viewing-past-orders)
+  - [Chatting with the Staff](#chatting-with-the-staff)
+- [Engaging in Camping's activities](#engaging-in-campings-activities)
+- [Using the Map](#using-the-map)
+- [Notes](#notes)
+- [Conclusion](#conclusion)
 
 ---
 <div style="page-break-after: always;"></div>
@@ -42,8 +41,10 @@ Upon opening the app, you'll be greeted by the **Main Menu**. From here, you can
 - Energy Management - AC
 - Weather
 - Activities
+- Order
+- Map
 
-<img src='./screenshots/MainMenu.png' width=60% style='border: 1px solid black;'>
+<img src='./screenshots/MainMenu.png' width=70% style='border: 1px solid black;'>
 ---
 
 ### Finding the Perfect Spot for Your Tent
@@ -54,9 +55,9 @@ Upon opening the app, you'll be greeted by the **Main Menu**. From here, you can
 5. Once you’ve clicked on your spot, click **Confirm** to proceed.
 
 
-Alternatively, you may follow app's recommendations for the best spot by clicking the blue `Apply Recommendations` button.
+Alternatively, you may select one of the suggested spots that are indicated using green targets.
 
-<img src='./screenshots/TentPosition.png' width=60% style='border: 1px solid black;'>
+<img src='./screenshots/TentPosition.png' width=70% style='border: 1px solid black;'>
 
 ---
 
@@ -70,7 +71,7 @@ To complete your tent setup process, follow the steps described bellow:
 
  Alternatively, for optimal pole placement, you may choose to apply system recommendations, simply by clicking the blue `Apply Suggested Settings` button.
 
-<img src='./screenshots/TentSetup.png' width=60% style='border: 1px solid black;'>
+<img src='./screenshots/TentSetup.png' width=70% style='border: 1px solid black;'>
 
 ---
 
@@ -91,7 +92,7 @@ Alternatively, you may click the blue `Apply Suggested Settings` button, which a
 ### Adjusting Light Settings
 The app provides flexible lighting controls to ensure your campsite is well-lit and inviting. To select whether you want to make custom lighting settings, or pick one of the presets for special occasions, you have to click to the corresponding button of the following menu:
 
-<img src="./screenshots/LightsMenu.png" width=60% style='border: 1px solid black;'> 
+<img src="./screenshots/LightsMenu.png" width=50% style='border: 1px solid black;'> 
 
 #### Custom Lighting Settings
 To set up custom lighting conditions follow these steps:
@@ -138,7 +139,7 @@ This page gives you access to adjust **Air-Conditioning settings**. To use the A
 
 AC you will start now making you feel more comfortable!
 
-<img src='./screenshots/EnergyManagement.png' width=60% style='border: 1px solid black;'>
+<img src='./screenshots/EnergyManagement.png' width=80% style='border: 1px solid black;'>
 
 ---
 
@@ -159,22 +160,21 @@ After checking on weather conditions, **you may want to proceed to cloth placeme
 Ordering page is there to help you `order your meal`, view your `past orders` and their status (delivered, pending, etc.), and `chat` with the camping staff for anything that concerns you about the food or the camping experience in general.
 
 #### Placing an order
-When placing your order you are just 5 clicks away from gettings your food delivered and eaten. The process is:
-1. From the combobox, pick your desired meal.
-2. You may also pick one refreshment from the combobox bellow.
-3. Now, pick the desired arrival time of the order (breakfast, dinner, lunch).
-4. Lastly, pick a payment method (payment on arrival, charge your account).
+When placing your order you are just few clicks away from gettings your food delivered and eaten. The process is:
+1. From the dropdown menu, pick your favourite restaurant.
+2. Then, select you preffered meal bundle.
+4. Lastly, pick a payment method (cash, card-payment).
 
 #### Viewing past orders
 On the right side of the screen you are able to see your `ordering history`. There, you can find information about all the orders you have made, including what you had ordered, order status (pending or delivered) and the payment method you used.
 
 #### Chatting with the Staff
 Right at the center of the page you can find the `chat-box` that you may use when you need any support from the camp's staff. To do so, use the chat-box like any chatting app you have used in the past. Specifficaly:
-1. In the field bellow the conversation type your message towards the staff.
+1. In the field bellow the conversation, type your message towards the staff.
 2. When you have finished writing your text message, press the corresponding `send icon`, at the right.
 3. Staff we will see your message and get back to you as soon as possible!
 
-<img src='./screenshots/Order.png' width=60% style='border: 1px solid black;'>
+<img src='./screenshots/Order.png' width=90% style='border: 1px solid black;'>
 
 ---
 

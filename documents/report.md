@@ -34,6 +34,8 @@ In the following sections, we will dive into some more technical details regardi
 
 **Color Pallete:** We wanted our app's design to preserve consistency, while establishing a unique identity. In that direction, we decided to create our app's Color Palette. Using [*Coolors*](https://coolors.co/) as our tool, we created a color palette with colors directly derived from our logo.
 
+**Chat Feature:** To implement the chatting feauture of our App, we have integrated one of the available models of the [OpenRouter](https://openrouter.ai/) API, and specifficaly the [Google's LearnLM 1.5 Pro Experimental](https://openrouter.ai/google/learnlm-1.5-pro-experimental:free) model. We did that to make the chatting feature smarter, and more interactive.
+
 ## Programming Language
 **Our Choice:** The project uses *React* (with TypeScript). React was chosen for its robust component-based structure, reusability, and strong community support.
 
@@ -41,7 +43,7 @@ In the following sections, we will dive into some more technical details regardi
 - **Fast Performance**: React's virtual DOM ensures that updates are efficient, leading to faster load times and a smoother user experience.
 - **Responsive UI**: React makes it easy to create responsive and dynamic user interfaces that work well on various devices and screen sizes.
 - **Consistent User Experience**: React's component-based architecture ensures that UI elements behave consistently across the app.
-- **Cross-Platform Compatibility**: With React Native, the same codebase can be used to build mobile applications, providing a seamless experience across web and mobile platforms.
+- **Cross-Platform Compatibility**: With React, no installation is required as it is web-based, lightweight single-page application and it guarantees consistent user experience accross different platforms.
 
 ## Project's Structure
 **Key Directories:**
