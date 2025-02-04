@@ -9,12 +9,7 @@
 
     - For Special Occasions Page:
         - Add operability so when user selects a preset, dummy values for lighting, color, switching patterns, etc. are set.
-
-    - For Activities Page:
-        - Make `Participate` button interactive when clicked
 )
-
-- Styling fixes on the Weather Page.
 
 - Update On-Line Help in every page.
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Activities.less';
 import Header from '../../components/Header';
 import HelpModal from '../../components/HelpModal';
@@ -9,6 +9,13 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Activities() {
     const navigate = useNavigate();
+    const [participationStatus, setParticipationStatus] = useState([false, false]);
+
+    const handleParticipate = (index: number) => {
+        const newStatus = [...participationStatus];
+        newStatus[index] = !newStatus[index];
+        setParticipationStatus(newStatus);
+    };
     return (
         <div className='Activities'>
             <Header title='Activities' helpContent={<HelpModal title='Activities' text="Here you can be informed about the upcoming activities of the camping! Do not forget to press the 'Participate' button, in order to get admission for the events!" />} />
@@ -23,7 +30,11 @@ export default function Activities() {
                             <InfoRow label='Friday 24 January 2025' value='Beach Volley League, meeting at the Beach at 5 p.m. Admissions until 23rd of January.' />
                         </div>
                         <div className='Button'>
-                            <ConfirmButton text='Participate' icon={ButtonIcon.Participate} color={ButtonColor.Green} />
+                            {participationStatus[0] ? (
+                                <ConfirmButton text='Submitted' icon={ButtonIcon.Tick} color={ButtonColor.Yellow} onClick={() => handleParticipate(0)} />
+                            ) : (
+                                <ConfirmButton text='Participate' icon={ButtonIcon.Participate} color={ButtonColor.Green} onClick={() => handleParticipate(0)} />
+                            )}
                         </div>
                     </InfoContainer>
                 </div>
@@ -34,7 +45,11 @@ export default function Activities() {
                             <InfoRow label='Sunday 26 January 2025' value='Jazz Music Concert, at the central stage at 9 p.m. Admissions until 25rd of January.' />
                         </div>
                         <div className='Button'>
-                            <ConfirmButton text='Submitted' icon={ButtonIcon.Tick} color={ButtonColor.Yellow} />
+                            {participationStatus[1] ? (
+                                <ConfirmButton text='Submitted' icon={ButtonIcon.Tick} color={ButtonColor.Yellow} onClick={() => handleParticipate(1)} />
+                            ) : (
+                                <ConfirmButton text='Participate' icon={ButtonIcon.Participate} color={ButtonColor.Green} onClick={() => handleParticipate(1)} />
+                            )}
                         </div>
                     </InfoContainer>
                 </div>
