@@ -23,6 +23,10 @@ export default function MainScreen() {
                         <MenuButton title='Weather' icon={MenuButtonIcon.Weather} link='/weather' />
                         <MenuButton title='Activities' icon={MenuButtonIcon.Activities} link='/activities' />
                     </div>
+                    <div className='ButtonsRow'>
+                        <MenuButton title='Order Food' icon={MenuButtonIcon.Efood} link='/efood' />
+                        <MenuButton title='Map' icon={MenuButtonIcon.Map} link='/map' />
+                    </div>
                 </div>
             </div>
         </div>

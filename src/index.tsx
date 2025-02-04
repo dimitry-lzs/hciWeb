@@ -18,6 +18,7 @@ import Activities from './pages/Activities';
 import PolesSetup from './pages/PolesSetup';
 import SpecialOccasions from './pages/SpecialOccasions';
 import Energy from './pages/Energy';
+import Efood from './pages/Efood';
 
 const router = createBrowserRouter([
     {
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
             {
                 path: '/energy',
                 element: <Energy/>
+            },
+            {
+                path: '/efood',
+                element: <Efood />
             }
         ],
         errorElement: <ErrorScreen />

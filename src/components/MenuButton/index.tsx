@@ -11,7 +11,9 @@ export enum MenuButtonIcon {
     Weather = 'weather',
     Activities = 'activities',
     Lightbulb = 'lightbulb',
-    SpecialOccasions = 'specialOccasions'
+    SpecialOccasions = 'specialOccasions',
+    Efood = 'efood',
+    Map = 'map',
 }
 
 export default function MenuButton({ title, icon, link }: {
