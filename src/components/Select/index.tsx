@@ -11,7 +11,7 @@ export default function Select({ options, onSelect, value = '', placeHolder = ''
     return (
         <div className='custom-select'>
             <select onChange={event => onSelect((event.target as HTMLSelectElement).value)} value={value || ''}>
-                {placeHolder ? <option disabled selected value={''}>{placeHolder}</option> : null}
+                {placeHolder ? <option disabled value={''}>{placeHolder}</option> : null}
                 {options.map((option: {
                     value: string;
                     label: string;

@@ -4,6 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = (env, argv) => {
 
@@ -57,6 +58,9 @@ module.exports = (env, argv) => {
         },
 
         plugins: [
+            new Dotenv({
+                path: '.env'
+            }),
             new HtmlWebpackPlugin({
                 template: './public/index.html',
                 filename: 'index.html'
@@ -93,7 +97,14 @@ module.exports = (env, argv) => {
         devServer: {
             port: 8081,
             open: true,
-            historyApiFallback: true
+            historyApiFallback: true,
+            proxy: [
+                {
+                    context: ['/api'],
+                    target: 'https://openrouter.ai',
+                    changeOrigin: true
+                }
+            ]
         },
 
         performance: {

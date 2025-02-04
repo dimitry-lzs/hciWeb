@@ -9,6 +9,7 @@ import ConfirmButton, { ButtonColor, ButtonIcon } from '../../components/Confirm
 import BackButton from '../../components/BackButton';
 
 import './Efood.less';
+import useChat from '../../hooks/useChat';
 
 enum Restaurants {
     GLA = 'gla',
@@ -73,10 +74,11 @@ const foodMenu = {
     ]
 };
 
-function Order({ order }: { order: { food: string; total: number; paymentMethod: { label: string, value: string }; status: 'delivered' | 'pending' } }) {
+function Order({ order }: { order: { restaurant: { value: string, label: string }, food: string; total: number; paymentMethod: { label: string, value: string }; status: 'delivered' | 'pending' } }) {
     return (
         <div className='OrderItem'>
             <div className='OrderNumber'>Order #123</div>
+            <div className='OrderDetailsRow'>Restaurant: {order.restaurant.label} <span className={`RetaurantIcon ${order.restaurant.value}`}></span></div>
             <div className='OrderDetailsRow'>{order.food}</div>
             <div className='OrderDetailsRow'>
                 Total:
@@ -102,12 +104,22 @@ function Order({ order }: { order: { food: string; total: number; paymentMethod:
     );
 }
 
-function Orders({ orders }: { orders: { food: string; total: number; paymentMethod: { label: string, value: string }; status: 'delivered' | 'pending' }[] }) {
+function Orders({ orders }: { orders: { restaurant: { value: string, label: string }, food: string; total: number; paymentMethod: { label: string, value: string }; status: 'delivered' | 'pending' }[] }) {
     return (
         <div className='OrdersList'>
             {orders.map((order, index) => (
                 <Order key={index} order={order} />
             ))}
+        </div>
+    );
+}
+
+function Typing() {
+    return (
+        <div className='Typing'>
+            <div className='Dot' />
+            <div className='Dot' />
+            <div className='Dot' />
         </div>
     );
 }
@@ -137,13 +149,15 @@ export default function Efood() {
     const navigate = useNavigate();
     const [restaurant, setRestaurant] = React.useState<Restaurants | null>(null);
 
-    const [orders, setOrders] = React.useState<{ food: string; total: number; paymentMethod: { label: string, value: string }; status: 'delivered' | 'pending' }[]>([]);
+    const [orders, setOrders] = React.useState<{ restaurant: { value: string, label: string }, food: string; total: number; paymentMethod: { label: string, value: string }; status: 'delivered' | 'pending' }[]>([]);
 
     const [food, setFood] = React.useState<string | null>(null);
     const [paymentMethod, setPaymentMethod] = React.useState<string | null>(null);
 
     const [messages, setMessages] = React.useState<{ text: string; incoming?: boolean }[]>([]);
     const [messageText, setMessageText] = React.useState('');
+
+    const { response, loading, sendMessage } = useChat();
 
     useEffect(() => {
         if (orders.length) {
@@ -159,6 +173,15 @@ export default function Efood() {
 
     const menu = useMemo(() => (restaurant && foodMenu[restaurant]) || [], [restaurant]);
 
+    useEffect(() => {
+        if (response) {
+            setMessages(oldMessages => [...oldMessages, {
+                text: response,
+                incoming: true
+            }]);
+        }
+    }, [response]);
+
     return (
         <div className='Efood'>
             <Header title='Order Food' helpContent={<HelpModal title='Ordering your food' text='Here you can choose one something for you from one of the restaurants we have here and place your order, contact restaurant, and see your order progress.' />} />
@@ -171,6 +194,7 @@ export default function Efood() {
                         ? <ConfirmButton text='Place Order' color={ButtonColor.Green} icon={ButtonIcon.Tick} onClick={() => {
                             setOrders(oldOrders =>
                                 [...oldOrders, {
+                                    restaurant: restaurants.find(item => item.value === restaurant) || { label: '', value: '' },
                                     food: menu.find(item => item.value === food)?.name || '',
                                     total: menu.find(item => item.value === food)?.price || 0,
                                     paymentMethod: paymentOptions.find(option => option.value === paymentMethod) || { label: '', value: '' },
@@ -191,17 +215,22 @@ export default function Efood() {
                         {messages.map((message, index) => (
                             <Message key={index} {...message} />
                         ))}
+                        {loading && <Typing />}
                     </div>
                     <div className='InputBox'>
                         <input placeholder='Type a message...' value={messageText} onChange={event => setMessageText(event.target.value)} onKeyDown={event => {
                             if (event.key === 'Enter' && messageText.trim()) {
                                 setMessages(oldMessages => [...oldMessages, { text: messageText, incoming: false }]);
+                                const ordersInfo = orders.map(order => `Restaurant: ${order.restaurant.label}, Item ordered: ${order.food}, Payment method: ${order.paymentMethod.label}`).join(' ');
+                                sendMessage(ordersInfo + ' ' + messageText);
                                 setMessageText('');
                             }
                         }} />
                         <div className='SendButton' onClick={() => {
                             if (messageText?.trim()) {
                                 setMessages(oldMessages => [...oldMessages, { text: messageText?.trim(), incoming: false }]);
+                                const ordersInfo = orders.map(order => `Restaurant: ${order.restaurant.label}, Item ordered: ${order.food}, Payment method: ${order.paymentMethod.label}`).join(' ');
+                                sendMessage(ordersInfo + ' ' + messageText);
                                 setMessageText('');
                             }
                         }} />
