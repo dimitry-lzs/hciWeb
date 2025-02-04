@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import Header from '../../components/Header';
@@ -146,6 +146,7 @@ function Message({ text, incoming }: { text: string; incoming?: boolean }) {
 const paymentOptions = [{ value: 'cash', label: 'Cash' }, { value: 'creditCard', label: 'Credit card' }, { value: 'later', label: 'Tha sta dwsw meta bro' }];
 
 export default function Efood() {
+    const messagesEndRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
     const [restaurant, setRestaurant] = React.useState<Restaurants | null>(null);
 
@@ -158,6 +159,12 @@ export default function Efood() {
     const [messageText, setMessageText] = React.useState('');
 
     const { response, loading, sendMessage } = useChat();
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    useEffect(scrollToBottom, [messages.length]);
 
     useEffect(() => {
         if (orders.length) {
@@ -216,6 +223,7 @@ export default function Efood() {
                             <Message key={index} {...message} />
                         ))}
                         {loading && <Typing />}
+                        <div ref={messagesEndRef} />
                     </div>
                     <div className='InputBox'>
                         <input placeholder='Type a message...' value={messageText} onChange={event => setMessageText(event.target.value)} onKeyDown={event => {
