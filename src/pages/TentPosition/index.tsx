@@ -83,7 +83,7 @@ export default function TentPosition() {
                         <li>Use the <strong>map</strong> to find a suitable tent spot. </li>
                         <li>Check <strong>soil stability, moisture, and sun exposure</strong> details. </li>
                         <li>Click on a spot, then press <strong>Confirm</strong> to select it. </li>
-                        <li>For an automatic choice, tap <strong>Apply Recommendations</strong>.</li>
+                        <li>For an automatic choice, choose one of the <strong>suggested locations</strong>.</li>
                     </ul>
                 </HelpModal>
             } />            <div className='Content tentPosition'>
