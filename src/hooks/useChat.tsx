@@ -29,7 +29,7 @@ const useChat = () => {
         setLoading(true);
         try {
             const { data } = await chatApi.post('/v1/chat/completions', {
-                model: 'openai/gpt-4o-mini',
+                model: 'google/learnlm-1.5-pro-experimental:free',
                 messages: [
                     {
                         role: 'user',
