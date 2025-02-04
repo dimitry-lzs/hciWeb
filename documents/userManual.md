@@ -1,4 +1,8 @@
-# User Manual for Smart Camping Application (TsaDiree)
+<div style="display: flex; align-items: center;">
+  <img src="../src/assets/Logo.png" alt="Smart Camping App Logo" width="80" style="margin-right: 10px;"/>
+  <h1 style="margin: 0;">User Manual for Smart Camping Application (TsaDiree)</h1>
+</div>
+
 **Developed by:** Dimitrios Lazanas P22082, Antonios Tsalmpouris P22272
 ### Overview
 The **Smart Camping** application is your ultimate digital solution for an enjoyable and stress-free camping experience. This manual provides a comprehensive guide on how to use the features of the app. Whether you're setting up your tent, finding the best spot, or customizing your campsite environment, this manual will help you navigate the app with ease.
@@ -23,8 +27,9 @@ The **Smart Camping** application is your ultimate digital solution for an enjoy
     - [Viewing Past Orders](#viewing-past-orders)
     - [Chatting with the Staff](#chatting-with-the-staff)
 9. [Engaging in Camping's Activities](#engaging-in-campings-activities)
-10. [Notes](#notes)
-11. [Conclusion](#conclusion)
+10. [Using the Map](#using-the-map)
+11. [Notes](#notes)
+12. [Conclusion](#conclusion)
 
 ---
 <div style="page-break-after: always;"></div>
@@ -184,6 +189,25 @@ To actively take part into an activity you have to **get your admission**. To do
 
 ---
 
+### Using the Map
+In this page, you can interact with the campsite's map, get information about all the places that you can visit within the camping area, and also, navigate yourself using the GPS feature of the App.
+
+Whether you are planning to go for a walk -to discover what our camping has to offer- or you want to know how to get to any place quickly and safely, you may use the GPS feature to guide you along the way. This page also provides you with important information like Day, Time, Weather Status, etc.
+
+How to get the full out of the Map Page:
+- At the left of the page you can get informed about campsite's most important places to visit.
+- At the center of the page, you can interact with the map, see your current location, and click on the pins to see more information about each place.
+- At the right, you may be informed about the current time/date, weather conditions, etc.
+
+To use the GPS feature:
+1. Click a pin on the map, to set it as your destination.
+2. Once you have clicked on a destination, press the green `Navigate` button.
+3. Follow the red line that showed up on the map, to reach your destination.
+
+<img src='./screenshots/Map.png' width=90% style='border: 1px solid black;'>
+
+---
+
 ### Notes
 - Each feature includes a help section accessible via the **Help** button in the top-right corner of the app.
 - Also, each page has a **back button** that navigates the user to the previous page.
@@ -194,4 +218,3 @@ To actively take part into an activity you have to **get your admission**. To do
 
 ### Conclusion
 The **Smart Camping** app is designed to enhance your camping experience by simplifying essential tasks. Use this manual as a reference to explore and make the most out of its features. For more information, feel free to visit our [project repository](https://github.com/dimitry-lzs/hciWeb) or reach out via the support page.
-<!-- Mitso make the repository public -->

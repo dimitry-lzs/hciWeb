@@ -151,7 +151,18 @@ export default function Map() {
         <div className='CampsiteMap'>
             <Header title='Map' helpContent={
                 <HelpModal title='Map Help'>
-                    <h3>You are on your own! (for now)</h3>
+                    <p><strong>Interacting with the Map Help</strong>  </p>
+                    <ul>
+                        <li><strong>Explore</strong> campsite locations and details.  </li>
+                        <li><strong>Interact</strong> with the map to see your location &amp; place info.  </li>
+                        <li><strong>Check</strong> time, date, and weather updates.  </li>
+                    </ul>
+                    <p><strong>Using GPS Navigation:</strong>  </p>
+                    <ol>
+                        <li>Click a <strong>pin</strong> to select a destination.  </li>
+                        <li>Press <strong>Navigate</strong> to start guidance.  </li>
+                        <li>Follow the <strong>red line</strong> on the map to reach your destination.  </li>
+                    </ol>
                 </HelpModal>
             } />
             <div className='Content'>
@@ -212,7 +223,7 @@ export default function Map() {
                                 {selectedLocation?.description}
                             </div>
                         </InfoContainer>
-                        <ConfirmButton onClick={() => setNavigation(true)} text='Navigate' color={ButtonColor.Green} icon={ButtonIcon.Navigate} />
+                            <ConfirmButton onClick={() => setNavigation(true)} text='Navigate' color={ButtonColor.Green} icon={ButtonIcon.Navigate} />
                         </>
                         : null}
                 </div>
