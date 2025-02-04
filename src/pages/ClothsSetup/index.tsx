@@ -17,12 +17,12 @@ export enum ClothPosition {
 
 function ValidityMessage(positionValidity: ClothPosition) {
     switch (positionValidity) {
-    case ClothPosition.good:
-        return <div className='PositionMessage good'>Good Position <div className='greenTick' /></div>;
-    case ClothPosition.susceptibleToPrecipitation:
-        return <div className='PositionMessage susceptibleToPrecipitation'>Susceptible to Precipitation: For those who like to get wet.</div>;
-    case ClothPosition.invalid:
-        return <div className='PositionMessage invalid'>Position is invalid.</div>;
+        case ClothPosition.good:
+            return <div className='PositionMessage good'>Good Position <div className='greenTick' /></div>;
+        case ClothPosition.susceptibleToPrecipitation:
+            return <div className='PositionMessage susceptibleToPrecipitation'>Susceptible to Precipitation: For those who like to get wet.</div>;
+        case ClothPosition.invalid:
+            return <div className='PositionMessage invalid'>Position is invalid.</div>;
     }
 }
 export default function ClothsSetupScreen() {
@@ -32,7 +32,17 @@ export default function ClothsSetupScreen() {
 
     return (
         <div className='ClothsSetup'>
-            <Header title='Cloths Setup' helpContent={<HelpModal title='Cloths adjustment interface' text='Here you can adjust cloths position by dragging it with your mouse, or apply suggested settings based on current weather' />} />
+            <Header title='Cloths Setup' helpContent={
+                <HelpModal title='Cloths Setup Help'>
+                    <ul>
+                        <li><strong>Drag &amp; drop</strong> the cloth to your desired location. </li>
+                        <li>The system will validate your placement. </li>
+                        <li>If needed, adjust until it meets requirements. </li>
+                        <li>Click <strong>Save Changes</strong> to confirm. </li>
+                        <li>For automatic placement, tap <strong>Apply Suggested Settings</strong>.</li>
+                    </ul>
+                </HelpModal>
+            } />
             <div className='Content'>
                 <NakedSkeleton />
                 <SkeletonClothes setPositionValidity={setPositionValidity} autoPosition={autoPosition} setAutoPosition={setAutoPosition} />

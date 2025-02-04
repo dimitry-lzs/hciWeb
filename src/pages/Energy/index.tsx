@@ -117,8 +117,22 @@ export default function Energy() {
 
     return (
         <div className='Energy'>
-            <Header title='Energy Management - AC' helpContent={<HelpModal title='Energy Management - AC' text='This page is the place for you to set up the Air Conditioning, see how much energy is produced and how much is consumed. If you want to save some energy you may press the yellow "Power Saving Mode" button.' />} />
-            <div className='Content'>
+            <Header title='Energy Management - AC' helpContent={
+                <HelpModal title='Energy Management - AC'>
+                    <ul>
+                        <li><strong>Solar Panels</strong>: Check <strong>Sun Exposure</strong> to see energy production. </li>
+                        <li><strong>Energy Status</strong>: Green = sufficient energy, Red = enable <strong>Power-Saving Mode</strong>
+                            (battery icon switch). </li>
+                        <li><strong>Power-Saving Mode</strong>: Turns <strong>lights</strong> and <strong>AC off</strong> to reduce consumption. </li>
+                        <li><strong>AC Controls</strong>: <ul>
+                            <li>Use the <strong>switch</strong> to turn AC <strong>ON/OFF</strong>. </li>
+                            <li>Choose <strong>cold (blue) or heat (red)</strong> mode. </li>
+                            <li>Adjust temperature with the <strong>slider</strong>.</li>
+                        </ul>
+                        </li>
+                    </ul>
+                </HelpModal>
+            } />            <div className='Content'>
                 <div className='PanelsRow'>
                     <SolarPanel sunExposure={panel1Exposure} label='I' />
                     <SolarPanel sunExposure={panel2Exposure} label='II' />

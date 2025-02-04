@@ -191,7 +191,32 @@ export default function Efood() {
 
     return (
         <div className='Efood'>
-            <Header title='Order Food' helpContent={<HelpModal title='Ordering your food' text='Here you can choose one something for you from one of the restaurants we have here and place your order, contact restaurant, and see your order progress.' />} />
+            <Header title='Order Food' helpContent={
+                <HelpModal title='Food Ordering Help'>
+                    <ul>
+                        <li>
+                            <p><strong>Placing an Order</strong>: </p>
+                            <ol>
+                                <li>Choose a <strong>restaurant</strong> from the dropdown. </li>
+                                <li>Select your desired <strong>meal bundle</strong> for the dropdown. </li>
+                                <li>Pick a <strong>payment method</strong></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <p><strong>Viewing Past Orders</strong>:<br />Check your <strong>ordering history</strong> on the right, including
+                                status and payment method. </p>
+                        </li>
+                        <li>
+                            <p><strong>Chat with Staff</strong>: </p>
+                            <ol>
+                                <li>Type your message in the chat field. </li>
+                                <li>Tap the <strong>send icon</strong> to send your message. </li>
+                                <li>Staff will respond as soon as possible.</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </HelpModal>
+            } />
             <div className='Content'>
                 <InfoContainer>
                     <div className='OrderTitle'>Your order</div>

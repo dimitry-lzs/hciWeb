@@ -99,20 +99,27 @@ export default function PolesSetupScreen() {
 
     const selectedPole = useMemo(() => {
         switch (pole) {
-        case 1: return 'one';
-        case 2: return 'two';
-        case 3: return 'three';
-        case 4: return 'four';
-        case 5: return 'five';
-        case 6: return 'six';
-        default: return 'one';
+            case 1: return 'one';
+            case 2: return 'two';
+            case 3: return 'three';
+            case 4: return 'four';
+            case 5: return 'five';
+            case 6: return 'six';
+            default: return 'one';
         }
     }, [pole]) as keyof Coordinates;
 
     return (
         <div className='PolesSetup'>
-            <Header title='Poles Setup' helpContent={<HelpModal title='Poles Placement' text='' />} />
-            <div className='Content'>
+            <Header title='Poles Setup' helpContent={
+                <HelpModal title='Poles Setup Help'>
+                    <ul>
+                        <li>Use <strong>arrows</strong> to select and adjust each <strong>pole&#39;s position and depth</strong>. </li>
+                        <li>Repeat for all poles to complete the setup. </li>
+                        <li>For automatic placement, tap <strong>Apply Suggested Settings</strong>.</li>
+                    </ul>
+                </HelpModal>
+            } />            <div className='Content'>
                 <SpookyScarySkeleton selectedPole={pole as keyof {}} />
                 <div className='PolesSettings'>
                     <div className='Controls'>

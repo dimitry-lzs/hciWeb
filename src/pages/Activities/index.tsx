@@ -18,7 +18,15 @@ export default function Activities() {
     };
     return (
         <div className='Activities'>
-            <Header title='Activities' helpContent={<HelpModal title='Activities' text="Here you can be informed about the upcoming activities of the camping! Do not forget to press the 'Participate' button, in order to get admission for the events!" />} />
+            <Header title='Activities' helpContent={
+                <HelpModal title='Activities'>
+                    <ul>
+                        <li>View <strong>upcoming activities</strong> with details (description, location, time, and deadline). </li>
+                        <li>To <strong>participate</strong>, click the green <strong>Participate</strong> button. </li>
+                        <li>If already enrolled, the button will turn <strong>yellow</strong>.</li>
+                    </ul>
+                </HelpModal>
+            } />
             <div className='Content'>
                 <div className='Info'>
                     <div className='Notification'>You have 2 upcoming activities! <span className='BellIcon'></span></div>

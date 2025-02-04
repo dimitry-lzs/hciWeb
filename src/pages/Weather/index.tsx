@@ -14,31 +14,38 @@ export default function Weather() {
     const [wind, setWind] = useState(15);
 
     useEffect(() => {
-        setTemperature(Math.floor(Math.random() * (35 - 15 + 1)) + 15); 
-        setHumidity(Math.floor(Math.random() * (100 - 50 + 1)) + 50); 
-        setWind(Math.floor(Math.random() * (30 - 5 + 1)) + 5); 
+        setTemperature(Math.floor(Math.random() * (35 - 15 + 1)) + 15);
+        setHumidity(Math.floor(Math.random() * (100 - 50 + 1)) + 50);
+        setWind(Math.floor(Math.random() * (30 - 5 + 1)) + 5);
     }, []);
-    
+
     return (
         <div className='Weather'>
-            <Header title='Weather' helpContent={<HelpModal title='Weather' text='Here you can be informed about the weather. If you decide you want to change your cloths placement, click on the button bellow!' />} />
-            <div className='Content'>
+            <Header title='Weather' helpContent={
+                <HelpModal title='Weather Check Help'>
+                    <ul>
+                        <li>View <strong>current weather</strong> (Sunny, Cloudy, Rainy). </li>
+                        <li>Check <strong>temperature, humidity, wind speed &amp; direction</strong>. </li>
+                        <li>Need more protection? Tap <strong>Cloths Adjustment</strong> to modify cloth's placement.</li>
+                    </ul>
+                </HelpModal>
+            } />            <div className='Content'>
                 <div className='ConditionTitle'>Condition:</div>
                 <div className='ConditionInfo'>Partly Cloudy<span className='ConditionIcon'></span></div>
                 <div className='WeatherDetails'>
                     <InfoContainer>
                         <div className='Info'>
-                        <span className='TemperatureIcon'></span>
-                        <div className="InfoTitle">Temperature:</div><div className='InfoWeather'> {temperature}C</div>
+                            <span className='TemperatureIcon'></span>
+                            <div className="InfoTitle">Temperature:</div><div className='InfoWeather'> {temperature}C</div>
                         </div>
                         <div className='Info'>
-                        <span className='HumidityIcon'></span>
-                        <div className="InfoTitle">Humidity:</div><div className='InfoWeather'> {humidity}%</div>
+                            <span className='HumidityIcon'></span>
+                            <div className="InfoTitle">Humidity:</div><div className='InfoWeather'> {humidity}%</div>
                         </div>
                         <div className='Info'>
-                        <span className='WindIcon'></span>
-                        <div className="InfoTitle">Wind:</div><div className='InfoWeather'> {wind}km/h</div>
-                        <span className='ArrowIcon'></span>
+                            <span className='WindIcon'></span>
+                            <div className="InfoTitle">Wind:</div><div className='InfoWeather'> {wind}km/h</div>
+                            <span className='ArrowIcon'></span>
                         </div>
                     </InfoContainer>
                 </div>

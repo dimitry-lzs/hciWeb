@@ -15,13 +15,22 @@ export default function CustomLighting() {
     const [warmth, setWarmth] = useState(4000);
 
     const applySuggestedSettings = () => {
-        setBrightness(1500); 
-        setWarmth(3000); 
+        setBrightness(1500);
+        setWarmth(3000);
     };
 
     return (
         <div className='CustomLighting'>
-            <Header title='Custom Lighting Settings' helpContent={<HelpModal title='Custom Lighting' text='Use the sliders to customly adjust the lighting.' />} />
+            <Header title='Custom Lighting' helpContent={
+                <HelpModal title='Custom Lighting Help'>
+                    <ul>
+                        <li>Adjust <strong>Brightness</strong> and <strong>Warmth</strong> using sliders. </li>
+                        <li>A <strong>virtual lamp</strong> previews your changes. </li>
+                        <li>Click <strong>Save Settings</strong> to confirm. </li>
+                        <li>For automatic setup, tap <strong>Apply Suggestions</strong>.</li>
+                    </ul>
+                </HelpModal>
+            } />
             <div className='Content'>
                 <div className='SettingsContainer'>
                     <SoberLamp warmth={warmth} brightness={brightness} />
@@ -43,7 +52,7 @@ export default function CustomLighting() {
                             </div>
                         </div>
                         <div className='Buttons'>
-                            <ConfirmButton text='Save settings' icon={ButtonIcon.Tick} color={ButtonColor.Green} onClick={() => navigate('/')}/>
+                            <ConfirmButton text='Save settings' icon={ButtonIcon.Tick} color={ButtonColor.Green} onClick={() => navigate('/')} />
                             <ConfirmButton text='Apply Suggested Settings' icon={ButtonIcon.Weather} color={ButtonColor.Blue} onClick={applySuggestedSettings} />
                         </div>
                     </div>

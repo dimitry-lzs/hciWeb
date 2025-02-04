@@ -55,8 +55,16 @@ export default function SpecialOccasions() {
 
     return (
         <div className='SpecialOccasions'>
-            <Header title='Smart Camp Special Occasions' helpContent={<HelpModal title='Special Occasions' text='You may select one of the preset lighting options by interacting with the "Presets" dropdown menu. Once you have selected a preset, you are still able to make some changes on the settings displayed on the menu. When you are satisfied with the lighting, you may click "Save Changes" button. (Note: As you experiment with the lighting settings, the digital lamps on the screen will help you decide what suits you best.)' />} />
-            <div className='Content'>
+            <Header title='Special Occasions Lighting' helpContent={
+                <HelpModal title='Special Lighting Help'>
+                    <ul>
+                        <li>Select a <strong>preset</strong> (e.g., Party Mode, Concert Mode). </li>
+                        <li>Settings like <strong>colors and effects</strong> auto-fill. </li>
+                        <li>Adjust them manually if needed. </li>
+                        <li>Click <strong>Save Changes</strong> to apply.</li>
+                    </ul>
+                </HelpModal>
+            } />            <div className='Content'>
                 <div className='Controls'>
                     <div className='MenuRow'>
                         <div className='SelectMenu'>

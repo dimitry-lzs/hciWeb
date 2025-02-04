@@ -8,8 +8,11 @@ import './Map.less';
 export default function Map() {
     return (
         <div className='CampsiteMap'>
-            <Header title='Map & Navigation' helpContent={<HelpModal title='See locations and navigate' text='Here you can take a closer look at what this camp has to offer, select a location and get navigation instructions to it.' />} />
-            <div className='Content'>
+            <Header title='Map' helpContent={
+                <HelpModal title='Map Help'>
+                    <h3>You are on your own! (for now)</h3>
+                </HelpModal>
+            } />            <div className='Content'>
                 <InfoContainer>
                     <div className='ContainerItem'>
                         <div className='LocationIcon' />

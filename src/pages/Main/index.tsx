@@ -9,8 +9,21 @@ import './Main.less';
 export default function MainScreen() {
     return (
         <div>
-            <Header title='Smart Camp Settings' helpContent={<HelpModal title='Main Menu' text='Here you can navigate to all other pages of the app' />} />
-            <div className='Content'>
+            <Header title='TsaDiree - Main Menu' helpContent={
+                <HelpModal title='Main Menu Help'>
+                    <p>Select a feature by clicking its button: </p>
+                    <ul>
+                        <li><strong>Tent Setup</strong> – Instructions for setting up your tent. </li>
+                        <li><strong>Protective Cloths</strong> – Guide for placing protective covers. </li>
+                        <li><strong>Lighting</strong> – Adjust brightness and settings. </li>
+                        <li><strong>Energy Management - AC</strong> – Control power usage and air conditioning. </li>
+                        <li><strong>Weather</strong> – Check real-time weather updates. </li>
+                        <li><strong>Activities</strong> – Explore available campsite activities.</li>
+                        <li><strong>Order Food</strong> – Order your food, chat with the staff.</li>
+                        <li><strong>Map</strong> – Explore the map of the campsite, use the GPS.</li>
+                    </ul>
+                </HelpModal>
+            } />            <div className='Content'>
                 <div className='Title'>Main Menu</div>
                 <div className='Menu'>
                     <div className='ButtonsRow'>

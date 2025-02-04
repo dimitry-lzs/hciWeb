@@ -77,8 +77,16 @@ export default function TentPosition() {
 
     return (
         <div>
-            <Header title='Tent Position' helpContent={<HelpModal title='Tent Positioning' text='Click where in the map you would like to place your tent. You may take advice from each spots unique characteristics.' />} />
-            <div className='Content tentPosition'>
+            <Header title='Tent Position' helpContent={
+                <HelpModal title='Tent Position Help'>
+                    <ul>
+                        <li>Use the <strong>map</strong> to find a suitable tent spot. </li>
+                        <li>Check <strong>soil stability, moisture, and sun exposure</strong> details. </li>
+                        <li>Click on a spot, then press <strong>Confirm</strong> to select it. </li>
+                        <li>For an automatic choice, tap <strong>Apply Recommendations</strong>.</li>
+                    </ul>
+                </HelpModal>
+            } />            <div className='Content tentPosition'>
                 <div className='MapContainer'>
                     <Map chosenCoordinates={chosenCoordinates} hoverCoordinates={setCoordinates} chooseCoordinates={chooseCoordinates} />
                     <div className='MapControls'>
