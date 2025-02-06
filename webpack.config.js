@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
+const { DefinePlugin } = webpack;
 
 module.exports = (env, argv) => {
 
@@ -79,6 +80,10 @@ module.exports = (env, argv) => {
                         }
                     }
                 ]
+            }),
+            new DefinePlugin({
+                OPENROUTER_API_KEY: JSON.stringify(process.env.OPENROUTER_API_KEY),
+                CHAT_URL: JSON.stringify(process.env.CHAT_URL)
             })
         ],
 
