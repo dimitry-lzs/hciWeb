@@ -10,7 +10,7 @@
     "build": "rimraf dist && webpack --mode production",
     "prod": "npm run build && http-server ./dist",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy" : "gh-pages -d dist"
   },
   "repository": {
     "type": "git"
