@@ -52,27 +52,27 @@ const router = createBrowserRouter([
             },
             {
                 path: '/lighting',
-                element: <LightsMenu/>
+                element: <LightsMenu />
             },
             {
                 path: '/custom-lighting',
-                element: <CustomLighting/>
+                element: <CustomLighting />
             },
             {
                 path: '/weather',
-                element: <Weather/>
+                element: <Weather />
             },
             {
                 path: '/activities',
-                element: <Activities/>
+                element: <Activities />
             },
             {
                 path: '/special-occasions',
-                element: <SpecialOccasions/>
+                element: <SpecialOccasions />
             },
             {
                 path: '/energy',
-                element: <Energy/>
+                element: <Energy />
             },
             {
                 path: '/efood',
@@ -85,7 +85,11 @@ const router = createBrowserRouter([
         ],
         errorElement: <ErrorScreen />
     }
-]);
+], {
+    basename: window.location.hostname.includes('github.io')
+        ? '/hciWeb'
+        : '/'
+});
 
 function boot() {
     const htmlElement = document.getElementById('root')!;
