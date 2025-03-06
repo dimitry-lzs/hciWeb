@@ -82,8 +82,7 @@ module.exports = (env, argv) => {
                 ]
             }),
             new DefinePlugin({
-                OPENROUTER_API_KEY: JSON.stringify(process.env.OPENROUTER_API_KEY),
-                CHAT_URL: JSON.stringify(process.env.CHAT_URL)
+                OPENROUTER_API_KEY: JSON.stringify(process.env.OPENROUTER_API_KEY)
             })
         ],
 
