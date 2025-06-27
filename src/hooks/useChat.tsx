@@ -28,15 +28,10 @@ const useChat = () => {
     const sendMessage = async (message: string) => {
         setLoading(true);
         try {
-            const { data } = await chatApi.post('/v1/chat/completions', {
-                model: 'google/learnlm-1.5-pro-experimental:free',
-                messages: [
-                    {
-                        role: 'user',
-                        content: prePrompt + message
-                    }
-                ]
-            });
+            const { data } = await chatApi.post('/generate-summary',
+                {
+                    prompt: prePrompt + message
+                });
             setResponse(data?.choices[0]?.message?.content);
         } catch (error) {
             console.error(error);
